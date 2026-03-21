@@ -8,447 +8,595 @@
       <name>7693471</name>
             <rtept lat="38.9612" lon="-94.64763">
          <name>Start</name>
+         <ele>288.8</ele>
       </rtept>
       <rtept lat="38.96102" lon="-94.64803">
          <name>Turn 1</name>
+         <ele>290.1</ele>
       </rtept>
       <rtept lat="38.96104" lon="-94.64848">
          <name>Turn 2</name>
+         <ele>291.0</ele>
       </rtept>
       <rtept lat="38.96108" lon="-94.64871">
          <name>Turn 3</name>
+         <ele>291.6</ele>
       </rtept>
       <rtept lat="38.96135" lon="-94.64887">
          <name>Turn 4</name>
+         <ele>291.6</ele>
       </rtept>
       <rtept lat="38.96213" lon="-94.64868">
          <name>Turn 5</name>
+         <ele>288.3</ele>
       </rtept>
       <rtept lat="38.96252" lon="-94.64883">
          <name>Turn 6</name>
+         <ele>288.9</ele>
       </rtept>
       <rtept lat="38.96285" lon="-94.6488">
          <name>Turn 7</name>
+         <ele>288.8</ele>
       </rtept>
       <rtept lat="38.96289" lon="-94.64854">
          <name>Turn 8</name>
+         <ele>288.8</ele>
       </rtept>
       <rtept lat="38.96278" lon="-94.64792">
          <name>Turn 9</name>
+         <ele>288.1</ele>
       </rtept>
       <rtept lat="38.96293" lon="-94.6475">
          <name>Turn 10</name>
+         <ele>287.4</ele>
       </rtept>
       <rtept lat="38.96316" lon="-94.64709">
          <name>Turn 11</name>
+         <ele>287.2</ele>
       </rtept>
       <rtept lat="38.96311" lon="-94.64653">
          <name>Turn 12</name>
+         <ele>286.9</ele>
       </rtept>
       <rtept lat="38.96306" lon="-94.64602">
          <name>Turn 13</name>
+         <ele>286.7</ele>
       </rtept>
       <rtept lat="38.96264" lon="-94.64561">
          <name>Turn 14</name>
+         <ele>286.2</ele>
       </rtept>
       <rtept lat="38.96242" lon="-94.6448">
          <name>Turn 15</name>
+         <ele>286.0</ele>
       </rtept>
       <rtept lat="38.96249" lon="-94.64434">
          <name>Turn 16</name>
+         <ele>285.9</ele>
       </rtept>
       <rtept lat="38.9627" lon="-94.64388">
          <name>Turn 17</name>
+         <ele>287.1</ele>
       </rtept>
       <rtept lat="38.9632" lon="-94.64322">
          <name>Turn 18</name>
+         <ele>287.8</ele>
       </rtept>
       <rtept lat="38.96367" lon="-94.64311">
          <name>Turn 19</name>
+         <ele>287.8</ele>
       </rtept>
       <rtept lat="38.96393" lon="-94.64258">
          <name>Turn 20</name>
+         <ele>289.7</ele>
       </rtept>
       <rtept lat="38.96393" lon="-94.64166">
          <name>Turn 21</name>
+         <ele>291.3</ele>
       </rtept>
       <rtept lat="38.96355" lon="-94.64119">
          <name>Turn 22</name>
+         <ele>292.7</ele>
       </rtept>
       <rtept lat="38.96338" lon="-94.64088">
          <name>Turn 23</name>
+         <ele>292.9</ele>
       </rtept>
       <rtept lat="38.96318" lon="-94.64087">
          <name>Turn 24</name>
+         <ele>293.0</ele>
       </rtept>
       <rtept lat="38.96297" lon="-94.64108">
          <name>Turn 25</name>
+         <ele>292.6</ele>
       </rtept>
       <rtept lat="38.9628" lon="-94.64059">
          <name>Turn 26</name>
+         <ele>292.1</ele>
       </rtept>
       <rtept lat="38.96254" lon="-94.64019">
          <name>Turn 27</name>
+         <ele>292.3</ele>
       </rtept>
       <rtept lat="38.96204" lon="-94.64015">
          <name>Turn 28</name>
+         <ele>291.0</ele>
       </rtept>
       <rtept lat="38.96159" lon="-94.64026">
          <name>Turn 29</name>
+         <ele>289.7</ele>
       </rtept>
       <rtept lat="38.96128" lon="-94.64042">
          <name>Turn 30</name>
+         <ele>289.1</ele>
       </rtept>
       <rtept lat="38.96085" lon="-94.64001">
          <name>Turn 31</name>
+         <ele>287.7</ele>
       </rtept>
       <rtept lat="38.95962" lon="-94.6401">
          <name>Turn 32</name>
+         <ele>287.4</ele>
       </rtept>
       <rtept lat="38.95861" lon="-94.64015">
          <name>Turn 33</name>
+         <ele>283.0</ele>
       </rtept>
       <rtept lat="38.95813" lon="-94.64015">
          <name>Turn 34</name>
+         <ele>281.4</ele>
       </rtept>
       <rtept lat="38.95791" lon="-94.6403">
          <name>Turn 35</name>
+         <ele>281.1</ele>
       </rtept>
       <rtept lat="38.95771" lon="-94.64077">
          <name>Turn 36</name>
+         <ele>281.6</ele>
       </rtept>
       <rtept lat="38.9575" lon="-94.64055">
          <name>Turn 37</name>
+         <ele>280.1</ele>
       </rtept>
       <rtept lat="38.9573" lon="-94.64061">
          <name>Turn 38</name>
+         <ele>279.1</ele>
       </rtept>
       <rtept lat="38.95728" lon="-94.64147">
          <name>Turn 39</name>
+         <ele>279.0</ele>
       </rtept>
       <rtept lat="38.95735" lon="-94.64179">
          <name>Turn 40</name>
+         <ele>280.2</ele>
       </rtept>
       <rtept lat="38.95767" lon="-94.64242">
          <name>Turn 41</name>
+         <ele>282.0</ele>
       </rtept>
       <rtept lat="38.95789" lon="-94.64299">
          <name>Turn 42</name>
+         <ele>284.0</ele>
       </rtept>
       <rtept lat="38.95834" lon="-94.64313">
          <name>Turn 43</name>
+         <ele>282.8</ele>
       </rtept>
       <rtept lat="38.95846" lon="-94.64402">
          <name>Turn 44</name>
+         <ele>282.8</ele>
       </rtept>
       <rtept lat="38.95866" lon="-94.64453">
          <name>Turn 45</name>
+         <ele>282.8</ele>
       </rtept>
       <rtept lat="38.95942" lon="-94.64479">
          <name>Turn 46</name>
+         <ele>283.6</ele>
       </rtept>
       <rtept lat="38.95981" lon="-94.64507">
          <name>Turn 47</name>
+         <ele>284.0</ele>
       </rtept>
       <rtept lat="38.96039" lon="-94.64541">
          <name>Turn 48</name>
+         <ele>284.6</ele>
       </rtept>
       <rtept lat="38.96086" lon="-94.64585">
          <name>Turn 49</name>
+         <ele>284.6</ele>
       </rtept>
       <rtept lat="38.96123" lon="-94.64629">
          <name>Turn 50</name>
+         <ele>284.3</ele>
       </rtept>
       <rtept lat="38.96142" lon="-94.64636">
          <name>Turn 51</name>
+         <ele>285.1</ele>
       </rtept>
       <rtept lat="38.96164" lon="-94.64625">
          <name>Turn 52</name>
+         <ele>286.0</ele>
       </rtept>
       <rtept lat="38.9619" lon="-94.64622">
          <name>Turn 53</name>
+         <ele>285.8</ele>
       </rtept>
       <rtept lat="38.96232" lon="-94.64701">
          <name>Turn 54</name>
+         <ele>287.1</ele>
       </rtept>
       <rtept lat="38.96275" lon="-94.64727">
          <name>Turn 55</name>
+         <ele>287.5</ele>
       </rtept>
       <rtept lat="38.96301" lon="-94.64706">
          <name>Turn 56</name>
+         <ele>287.1</ele>
       </rtept>
       <rtept lat="38.96296" lon="-94.64681">
          <name>Turn 57</name>
+         <ele>286.8</ele>
       </rtept>
       <rtept lat="38.96275" lon="-94.64652">
          <name>Turn 58</name>
+         <ele>286.0</ele>
       </rtept>
       <rtept lat="38.96232" lon="-94.64616">
          <name>Turn 59</name>
+         <ele>285.4</ele>
       </rtept>
       <rtept lat="38.96196" lon="-94.64612">
          <name>Turn 60</name>
+         <ele>285.6</ele>
       </rtept>
       <rtept lat="38.96179" lon="-94.64581">
          <name>Turn 61</name>
+         <ele>285.2</ele>
       </rtept>
       <rtept lat="38.96165" lon="-94.6455">
          <name>Turn 62</name>
+         <ele>284.7</ele>
       </rtept>
       <rtept lat="38.96153" lon="-94.64538">
          <name>Turn 63</name>
+         <ele>284.5</ele>
       </rtept>
       <rtept lat="38.96144" lon="-94.64529">
          <name>Turn 64</name>
+         <ele>284.2</ele>
       </rtept>
       <rtept lat="38.96146" lon="-94.64489">
          <name>Turn 65</name>
+         <ele>284.6</ele>
       </rtept>
       <rtept lat="38.96132" lon="-94.64479">
          <name>Turn 66</name>
+         <ele>284.5</ele>
       </rtept>
       <rtept lat="38.96108" lon="-94.64462">
          <name>Turn 67</name>
+         <ele>284.6</ele>
       </rtept>
       <rtept lat="38.96084" lon="-94.64453">
          <name>Turn 68</name>
+         <ele>283.9</ele>
       </rtept>
       <rtept lat="38.96037" lon="-94.64409">
          <name>Turn 69</name>
+         <ele>284.6</ele>
       </rtept>
       <rtept lat="38.96001" lon="-94.64386">
          <name>Turn 70</name>
+         <ele>283.9</ele>
       </rtept>
       <rtept lat="38.95973" lon="-94.64349">
          <name>Turn 71</name>
+         <ele>283.9</ele>
       </rtept>
       <rtept lat="38.95943" lon="-94.6431">
          <name>Turn 72</name>
+         <ele>284.1</ele>
       </rtept>
       <rtept lat="38.95893" lon="-94.64293">
          <name>Turn 73</name>
+         <ele>282.6</ele>
       </rtept>
       <rtept lat="38.95866" lon="-94.64269">
          <name>Turn 74</name>
+         <ele>281.4</ele>
       </rtept>
       <rtept lat="38.95845" lon="-94.64224">
          <name>Turn 75</name>
+         <ele>280.9</ele>
       </rtept>
       <rtept lat="38.95825" lon="-94.64157">
          <name>Turn 76</name>
+         <ele>281.1</ele>
       </rtept>
       <rtept lat="38.9579" lon="-94.64108">
          <name>Turn 77</name>
+         <ele>281.7</ele>
       </rtept>
       <rtept lat="38.95774" lon="-94.64084">
          <name>Turn 78</name>
+         <ele>281.6</ele>
       </rtept>
       <rtept lat="38.9581" lon="-94.64021">
          <name>Turn 79</name>
+         <ele>282.0</ele>
       </rtept>
       <rtept lat="38.95912" lon="-94.64018">
          <name>Turn 80</name>
+         <ele>285.0</ele>
       </rtept>
       <rtept lat="38.96035" lon="-94.64009">
          <name>Turn 81</name>
+         <ele>287.8</ele>
       </rtept>
       <rtept lat="38.96081" lon="-94.64005">
          <name>Turn 82</name>
+         <ele>287.7</ele>
       </rtept>
       <rtept lat="38.96131" lon="-94.64044">
          <name>Turn 83</name>
+         <ele>289.2</ele>
       </rtept>
       <rtept lat="38.9618" lon="-94.64026">
          <name>Turn 84</name>
+         <ele>290.1</ele>
       </rtept>
       <rtept lat="38.9623" lon="-94.6402">
          <name>Turn 85</name>
+         <ele>291.7</ele>
       </rtept>
       <rtept lat="38.9628" lon="-94.64054">
          <name>Turn 86</name>
+         <ele>292.2</ele>
       </rtept>
       <rtept lat="38.96299" lon="-94.64113">
          <name>Turn 87</name>
+         <ele>292.6</ele>
       </rtept>
       <rtept lat="38.96323" lon="-94.64091">
          <name>Turn 88</name>
+         <ele>292.9</ele>
       </rtept>
       <rtept lat="38.96395" lon="-94.64169">
          <name>Turn 89</name>
+         <ele>291.3</ele>
       </rtept>
       <rtept lat="38.96396" lon="-94.64253">
          <name>Turn 90</name>
+         <ele>289.7</ele>
       </rtept>
       <rtept lat="38.96335" lon="-94.64315">
          <name>Turn 91</name>
+         <ele>287.7</ele>
       </rtept>
       <rtept lat="38.96275" lon="-94.64371">
          <name>Turn 92</name>
+         <ele>287.5</ele>
       </rtept>
       <rtept lat="38.96242" lon="-94.64464">
          <name>Turn 93</name>
+         <ele>285.2</ele>
       </rtept>
       <rtept lat="38.96251" lon="-94.64543">
          <name>Turn 94</name>
+         <ele>286.1</ele>
       </rtept>
       <rtept lat="38.96308" lon="-94.64598">
          <name>Turn 95</name>
+         <ele>286.8</ele>
       </rtept>
       <rtept lat="38.96319" lon="-94.64706">
          <name>Turn 96</name>
+         <ele>287.1</ele>
       </rtept>
       <rtept lat="38.96283" lon="-94.64787">
          <name>Turn 97</name>
+         <ele>288.2</ele>
       </rtept>
       <rtept lat="38.96293" lon="-94.64858">
          <name>Turn 98</name>
+         <ele>288.7</ele>
       </rtept>
       <rtept lat="38.96257" lon="-94.64887">
          <name>Turn 99</name>
+         <ele>289.2</ele>
       </rtept>
       <rtept lat="38.96193" lon="-94.64878">
          <name>Turn 100</name>
+         <ele>289.5</ele>
       </rtept>
       <rtept lat="38.96139" lon="-94.6489">
          <name>Turn 101</name>
+         <ele>291.8</ele>
       </rtept>
       <rtept lat="38.96106" lon="-94.64874">
          <name>Turn 102</name>
+         <ele>291.7</ele>
       </rtept>
       <rtept lat="38.96106" lon="-94.64806">
          <name>Turn 103</name>
+         <ele>290.0</ele>
       </rtept>
       <rtept lat="38.96122" lon="-94.64769">
          <name>Turn 104</name>
+         <ele>288.9</ele>
       </rtept>
       <rtept lat="38.96121" lon="-94.64727">
          <name>Turn 105</name>
+         <ele>288.0</ele>
       </rtept>
       <rtept lat="38.96131" lon="-94.64653">
          <name>Turn 106</name>
+         <ele>285.1</ele>
       </rtept>
       <rtept lat="38.96145" lon="-94.64618">
          <name>Turn 107</name>
+         <ele>284.9</ele>
       </rtept>
       <rtept lat="38.96168" lon="-94.64582">
          <name>Turn 108</name>
+         <ele>285.2</ele>
       </rtept>
       <rtept lat="38.96164" lon="-94.64539">
          <name>Turn 109</name>
+         <ele>283.9</ele>
       </rtept>
       <rtept lat="38.96165" lon="-94.64475">
          <name>Turn 110</name>
+         <ele>285.9</ele>
       </rtept>
       <rtept lat="38.96166" lon="-94.64409">
          <name>Turn 111</name>
+         <ele>287.4</ele>
       </rtept>
       <rtept lat="38.9617" lon="-94.64344">
          <name>Turn 112</name>
+         <ele>288.0</ele>
       </rtept>
       <rtept lat="38.96216" lon="-94.6432">
          <name>Turn 113</name>
+         <ele>288.9</ele>
       </rtept>
       <rtept lat="38.96247" lon="-94.64246">
          <name>Turn 114</name>
+         <ele>290.3</ele>
       </rtept>
       <rtept lat="38.96246" lon="-94.64154">
          <name>Turn 115</name>
+         <ele>291.9</ele>
       </rtept>
       <rtept lat="38.96246" lon="-94.6412">
          <name>Turn 116</name>
+         <ele>292.2</ele>
       </rtept>
       <rtept lat="38.96249" lon="-94.64093">
          <name>Turn 117</name>
+         <ele>291.9</ele>
       </rtept>
       <rtept lat="38.96236" lon="-94.64091">
          <name>Turn 118</name>
+         <ele>291.8</ele>
       </rtept>
       <rtept lat="38.9622" lon="-94.64083">
          <name>Turn 119</name>
+         <ele>291.4</ele>
       </rtept>
       <rtept lat="38.96192" lon="-94.64071">
          <name>Turn 120</name>
+         <ele>290.8</ele>
       </rtept>
       <rtept lat="38.96159" lon="-94.64074">
          <name>Turn 121</name>
+         <ele>290.3</ele>
       </rtept>
       <rtept lat="38.96119" lon="-94.64077">
          <name>Turn 122</name>
+         <ele>289.6</ele>
       </rtept>
       <rtept lat="38.96089" lon="-94.64076">
          <name>Turn 123</name>
+         <ele>289.9</ele>
       </rtept>
       <rtept lat="38.96057" lon="-94.64061">
          <name>Turn 124</name>
+         <ele>289.9</ele>
       </rtept>
       <rtept lat="38.95935" lon="-94.64069">
          <name>Turn 125</name>
+         <ele>287.7</ele>
       </rtept>
       <rtept lat="38.95877" lon="-94.64077">
          <name>Turn 126</name>
+         <ele>285.2</ele>
       </rtept>
       <rtept lat="38.95893" lon="-94.64133">
          <name>Turn 127</name>
+         <ele>284.6</ele>
       </rtept>
       <rtept lat="38.9594" lon="-94.6421">
          <name>Turn 128</name>
+         <ele>286.4</ele>
       </rtept>
       <rtept lat="38.95958" lon="-94.6424">
          <name>Turn 129</name>
+         <ele>286.7</ele>
       </rtept>
       <rtept lat="38.95967" lon="-94.6431">
          <name>Turn 130</name>
+         <ele>285.0</ele>
       </rtept>
       <rtept lat="38.95991" lon="-94.64339">
          <name>Turn 131</name>
+         <ele>284.9</ele>
       </rtept>
       <rtept lat="38.96017" lon="-94.64334">
          <name>Turn 132</name>
+         <ele>285.7</ele>
       </rtept>
       <rtept lat="38.96041" lon="-94.64303">
          <name>Turn 133</name>
+         <ele>287.1</ele>
       </rtept>
       <rtept lat="38.96063" lon="-94.6429">
          <name>Turn 134</name>
+         <ele>289.0</ele>
       </rtept>
       <rtept lat="38.96096" lon="-94.64311">
          <name>Turn 135</name>
+         <ele>288.0</ele>
       </rtept>
       <rtept lat="38.9613" lon="-94.64317">
          <name>Turn 136</name>
+         <ele>288.4</ele>
       </rtept>
       <rtept lat="38.96135" lon="-94.64331">
          <name>Turn 137</name>
+         <ele>288.0</ele>
       </rtept>
       <rtept lat="38.9613" lon="-94.64411">
          <name>Turn 138</name>
+         <ele>286.4</ele>
       </rtept>
       <rtept lat="38.96144" lon="-94.64471">
          <name>Turn 139</name>
+         <ele>285.3</ele>
       </rtept>
       <rtept lat="38.9615" lon="-94.64508">
          <name>Turn 140</name>
+         <ele>284.5</ele>
       </rtept>
       <rtept lat="38.96131" lon="-94.64545">
          <name>Turn 141</name>
+         <ele>284.8</ele>
       </rtept>
       <rtept lat="38.96123" lon="-94.64595">
          <name>Turn 142</name>
+         <ele>283.9</ele>
       </rtept>
       <rtept lat="38.96118" lon="-94.64625">
          <name>Turn 143</name>
+         <ele>284.2</ele>
       </rtept>
       <rtept lat="38.96119" lon="-94.64665">
          <name>Turn 144</name>
+         <ele>287.1</ele>
       </rtept>
       <rtept lat="38.96109" lon="-94.64693">
          <name>Turn 145</name>
+         <ele>287.4</ele>
       </rtept>
       <rtept lat="38.96101" lon="-94.64726">
          <name>Turn 146</name>
+         <ele>288.2</ele>
       </rtept>
       <rtept lat="38.96115" lon="-94.64739">
          <name>Turn 147</name>
+         <ele>288.3</ele>
       </rtept>
    </rte>
 </gpx>
