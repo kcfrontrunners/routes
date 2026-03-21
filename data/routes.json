@@ -29,7 +29,10 @@
     "source_name": "North Johnson County 3",
     "source_description": "Travel south on Mission Rd to Reinhardt, then south to Howe. Return north on Reinhardt to Mission Rd, then to 53rd Place, Clark Dr, and Elledge Dr. Proceed to 47th, then back to Reinhardt Dr and return to the mission.",
     "notes": "",
-    "last_run_dates": []
+    "last_run_dates": [
+      "2026-02-22",
+      "2025-11-30"
+    ]
   },
   {
     "route_id": "7794773",
@@ -2526,7 +2529,10 @@
     "source_name": "Tomahawk Creek Trail",
     "source_description": "Meet at 105th",
     "notes": "",
-    "last_run_dates": []
+    "last_run_dates": [
+      "2026-01-25",
+      "2025-04-27"
+    ]
   },
   {
     "route_id": "5973024",
@@ -2542,7 +2548,12 @@
     "source_name": "Waldo - 6 Miles",
     "source_description": "Meet at 74th - Trolley Trail north to 55th St and back",
     "notes": "",
-    "last_run_dates": []
+    "last_run_dates": [
+      "2026-02-08",
+      "2025-11-09",
+      "2025-08-10",
+      "2025-05-11"
+    ]
   },
   {
     "route_id": "5973011",
@@ -2558,7 +2569,11 @@
     "source_name": "Armour Hills",
     "source_description": "Meet at 63rd",
     "notes": "",
-    "last_run_dates": []
+    "last_run_dates": [
+      "2026-01-04",
+      "2025-10-05",
+      "2025-07-06"
+    ]
   },
   {
     "route_id": "5965565",
