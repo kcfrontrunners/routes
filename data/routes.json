@@ -12,7 +12,8 @@
     "garmin_embed_url": "",
     "source_name": "Crestwood Starting from Picnic Shelter",
     "source_description": "Crestewood, starting at Picnic Shelter at Loose Park",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7796655",
@@ -27,7 +28,8 @@
     "garmin_embed_url": "",
     "source_name": "North Johnson County 3",
     "source_description": "Travel south on Mission Rd to Reinhardt, then south to Howe. Return north on Reinhardt to Mission Rd, then to 53rd Place, Clark Dr, and Elledge Dr. Proceed to 47th, then back to Reinhardt Dr and return to the mission.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7794773",
@@ -42,7 +44,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Wyandotte S to 63rd St to Trolley Trail to 51st St to Loose Park",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7784318",
@@ -57,7 +60,8 @@
     "garmin_embed_url": "",
     "source_name": "Tomahawk Creek Trail WEST to Indian Creek Trail",
     "source_description": "From 105th & Lee Blvd, go WEST past Mission, under 435 to Roe, then south to Indian Creek Trail to Nall and back to the beginning.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7775712",
@@ -72,7 +76,8 @@
     "garmin_embed_url": "",
     "source_name": "North Kansas City",
     "source_description": "Start at downtown airport - North on Atlantic St ti 16th St, left to 18th St, east to Swift St north to 31st St west to Buchanan St south to 18th St west to Atlantic St and then south back to the KC airport.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7771705",
@@ -87,7 +92,10 @@
     "garmin_embed_url": "",
     "source_name": "Lawrence - Burroughs Creek Trail",
     "source_description": "Lawrence, staring at the Cider Gallery and going on the Burroughs Creek Trail",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": [
+      "2025-11-16"
+    ]
   },
   {
     "route_id": "7749357",
@@ -102,7 +110,13 @@
     "garmin_embed_url": "",
     "source_name": "Line Creek Trail - Start in Riverside",
     "source_description": "Start at the Mid-Continent Library Parking Lot at",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": [
+      "2025-12-14",
+      "2025-09-14",
+      "2025-06-22",
+      "2025-03-23"
+    ]
   },
   {
     "route_id": "7739549",
@@ -117,7 +131,10 @@
     "garmin_embed_url": "",
     "source_name": "Parkville MO - NEW TRAIL",
     "source_description": "English Landing Park & then NEW TRAIL",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": [
+      "2025-08-03"
+    ]
   },
   {
     "route_id": "7736747",
@@ -132,7 +149,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "47th to Wyoming to Wark Parkway E to Main St S to 51st St W to Sunrise Dr down to the Plaza and over the Pedestrian Bridge and back through Mill Creek Park.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7732919",
@@ -147,7 +165,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "South on Wyndotte to Brookside Blvd, south to 63rd St, then east to Morningside, then south to the Trolley Trail and back to Loose Park via 51st St.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7730671",
@@ -162,7 +181,8 @@
     "garmin_embed_url": "",
     "source_name": "Downtown Airport",
     "source_description": "Meet in the Parking Lot and run the loop around Richards Road to the Levee Rd and back to the parking lot.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7730652",
@@ -177,7 +197,13 @@
     "garmin_embed_url": "",
     "source_name": "Indian Creek Trail In MISSOURI",
     "source_description": "Starting at 99th",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": [
+      "2026-01-18",
+      "2025-10-19",
+      "2025-08-24",
+      "2025-04-20"
+    ]
   },
   {
     "route_id": "7705366",
@@ -192,7 +218,8 @@
     "garmin_embed_url": "",
     "source_name": "North Johnson County 2",
     "source_description": "Start at Indian Mission then S on Reinhardt Rd and N on Howe back to Reinhardt Rd. Continue north on Reinhardt to 47th St, east to Canterbury St, then south until it ends, then left to Mission Rd and back to the Indian Mission.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7702857",
@@ -207,7 +234,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "Oak St. N to 39th to Gillham South to Kauffman Lake to Brush Creek west, north to 47th St and back through the Plaza to Mill Creek Park.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7693471",
@@ -222,7 +250,8 @@
     "garmin_embed_url": "",
     "source_name": "Meadowbrook Park",
     "source_description": "Meet at 91st",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7692630",
@@ -237,7 +266,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "South on Summit to Meyer, then east to Morningside, then north on Morningside to Grand to the Trolley Trail south to 51st St., then west back to Loose Park.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7692629",
@@ -252,7 +282,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "South on Summit to Meyer, then east to Morningside, then north on Morningside to Grand to the Trolley Trail south to 51st St., then west back to Loose Park.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7686085",
@@ -267,7 +298,8 @@
     "garmin_embed_url": "",
     "source_name": "Heritage Trail to KCK - Detour",
     "source_description": "Heritage Trail to KCK Detour- avoiding the \"stinky smell.\"",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7686086",
@@ -282,7 +314,8 @@
     "garmin_embed_url": "",
     "source_name": "Heritage Trail to KCK - Detour",
     "source_description": "Heritage Trail to KCK Detour- avoiding the \"stinky smell.\"",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7685339",
@@ -297,7 +330,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Mill Creek Run from the Shelter House",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7685133",
@@ -312,7 +346,8 @@
     "garmin_embed_url": "",
     "source_name": "Heritage Trail to KCK - 601 Main",
     "source_description": "Heritage Trail to KCK, starting at 601 Main St.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7683411",
@@ -327,7 +362,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Huntington Downhill & North on Wyandotte.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7682373",
@@ -342,7 +378,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Wyandotte S to Huntington Rd W to Ward Parkway N to Sunset to Ward Parkay E to Brookside Blvd S to 51st St W back to Loose Park",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7664180",
@@ -357,7 +394,8 @@
     "garmin_embed_url": "",
     "source_name": "North Johnson County 2",
     "source_description": "Starting from the Shawnee Indian Mission",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7649751",
@@ -372,7 +410,8 @@
     "garmin_embed_url": "",
     "source_name": "Union Station to Westport",
     "source_description": "South on Wyandotte to Wesport, return on Pennsylvania",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7647396",
@@ -387,7 +426,8 @@
     "garmin_embed_url": "",
     "source_name": "Rock Island Trail - Vale Trailhead",
     "source_description": "Meet at Vale Trailhead off Bannister Rd - Run south to Lee's Summit",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7634386",
@@ -402,7 +442,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "Hyde Park - Wyandotte N to 36th St E to Brush Creek (46th) W to 47th W to Mill Creek Park",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7631533",
@@ -417,7 +458,13 @@
     "garmin_embed_url": "",
     "source_name": "Volker",
     "source_description": "Roanoke Park on Valentine to Bell south through Westwood Park to 50th St, then north on Genessee to Roanoke Road to Karnes back to the Roanoke Community Center",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": [
+      "2026-01-11",
+      "2025-10-12",
+      "2025-07-13",
+      "2025-04-13"
+    ]
   },
   {
     "route_id": "7630224",
@@ -432,7 +479,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "N on Penn around lake and up to Liberty Memorial and back on Wyandotte.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7629417",
@@ -447,7 +495,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "PLAZA - 47th to Wyoming to Ward Parkway to 47th east to Harrison to Gillham Park and back on 41st St to Oak to 43rd St.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7594953",
@@ -462,7 +511,8 @@
     "garmin_embed_url": "",
     "source_name": "Lawrence KS",
     "source_description": "Start at 810 Pennsylvania",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7591688",
@@ -477,7 +527,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Mission 3A - Mission Drive to 63rd St and North on Summit back to Loose Park",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7591684",
@@ -492,7 +543,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Mission Hills 3 - Summit to 55th St to Mission Hills Drive to 63rd St to Trolley Trail back to Loose Park.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7572631",
@@ -507,7 +559,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Bellevue S to 63rd E to Morningside N to 57th to the Trolley Trail to 51st and back to the park.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7567085",
@@ -522,7 +575,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "43rd to Brush Creek to Gillham to 36th to Janseen Place to Harrison to Gilliam to 41st St to Oak to 43rd St.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7552813",
@@ -537,7 +591,8 @@
     "garmin_embed_url": "",
     "source_name": "Armour Hills - Summit St to Loose Park",
     "source_description": "63rd St to Summit St N to Loose Park and back.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7551726",
@@ -552,7 +607,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "47th St to Roanoke to Westport Rd to Bell N to 39th St E to Wyoming to Valentine Rd to Pennsylvania to Westport Rd to Central St.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7551089",
@@ -567,7 +623,8 @@
     "garmin_embed_url": "",
     "source_name": "Valentine - 5 Miles",
     "source_description": "Valentine Rd to Roanoke Rd to Karnes to 31st to Pennsylvania to Westport Rd to Roanoke Rd.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7551079",
@@ -582,7 +639,8 @@
     "garmin_embed_url": "",
     "source_name": "Valentine - 4 Miles",
     "source_description": "Starting on Valentine Rd to Roanoke Rd to Karnes to 31st St to Pennsylvania to Valentine.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7542225",
@@ -597,7 +655,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "43rd to Warwick to Rockhill to Cherry to 51st St to Holmes to 55th St to Trolley Trail & back to Oak & Warwick to 43rd",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7526544",
@@ -612,7 +671,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "55th St W to Mission Dr to 63rd St & back the Trolley Trail.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7478998",
@@ -627,7 +687,8 @@
     "garmin_embed_url": "",
     "source_name": "Indian Creek Trail 1/2 Marathon",
     "source_description": "Starting at 103rd going west 3.5 miles past the freeway then reversed back to starting point and then going east 3 miles until the freeway and then reversed back to the starting point.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7432479",
@@ -642,7 +703,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "43rd to Gillham Park, Kauffman Lake, Brush Creek, 47th St back to Mill Creek Park",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7430584",
@@ -657,7 +719,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "Plaza - 47th to Wyoming to Wark Parkway to Rockhill back to 43rd",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7422152",
@@ -672,7 +735,8 @@
     "garmin_embed_url": "",
     "source_name": "Heritage Park - Olathe KS",
     "source_description": "160th & Pflumn - Heritage Lake",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7391207",
@@ -687,7 +751,8 @@
     "garmin_embed_url": "",
     "source_name": "New Valentine - Westport Rd",
     "source_description": "New Valentine Route taking Westport Rd instead of 43rd St",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7383158",
@@ -702,7 +767,8 @@
     "garmin_embed_url": "",
     "source_name": "Scout",
     "source_description": "Kevin's route",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7359346",
@@ -717,7 +783,8 @@
     "garmin_embed_url": "",
     "source_name": "Valentine - New 4 Miles",
     "source_description": "W on Valentine Road to Roanoke Dr to Roanoke Rd to Westport Rd E to Wyandotte N to 36th St back to Valentine Shopping Center.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7356649",
@@ -732,7 +799,8 @@
     "garmin_embed_url": "",
     "source_name": "North Johnson County",
     "source_description": "Start at Bob & John's house then S on Reinhardt Rd to 63rd & then back north on Howe Dr.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7327109",
@@ -747,7 +815,8 @@
     "garmin_embed_url": "",
     "source_name": "Valentine - New 5 Miles",
     "source_description": "Start a Valentine Shopping Center",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7250494",
@@ -762,7 +831,8 @@
     "garmin_embed_url": "",
     "source_name": "Berkley Park",
     "source_description": "Berkley Park via Grand Bridge 7 Riverfront Road",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7250492",
@@ -777,7 +847,8 @@
     "garmin_embed_url": "",
     "source_name": "Case Park",
     "source_description": "Case Park via Riverfront Trail to 20th St & North on Grand",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7181614",
@@ -792,7 +863,10 @@
     "garmin_embed_url": "",
     "source_name": "Scout (Old Westport)",
     "source_description": "Penn Valley Park, Liberty Memorial, S on Wyandotte to Westport Rd & N on Pennsylvania",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": [
+      "2025-06-29"
+    ]
   },
   {
     "route_id": "7157470",
@@ -807,7 +881,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "N on Penn around lake",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7104273",
@@ -822,7 +897,8 @@
     "garmin_embed_url": "",
     "source_name": "City Market",
     "source_description": "Heritage Trail to KCK",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7086395",
@@ -837,7 +913,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Summit south to 63, Ward Parkway to Sunset and back to Loose Park",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7056975",
@@ -852,7 +929,8 @@
     "garmin_embed_url": "",
     "source_name": "Heritage Trail to KCK with Detour",
     "source_description": "Woodsweather Rd Detour across Forester Rd bridge to Wyoming to the Heritage Trail to KCK and back.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7019833",
@@ -867,7 +945,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "Hype Park Route via Locust and Walnut N to 36th St E to Harrison S to Gillham to 42nd St.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "7016962",
@@ -882,7 +961,8 @@
     "garmin_embed_url": "",
     "source_name": "Parkville MO",
     "source_description": "English Landing Park",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6993316",
@@ -897,7 +977,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek Park",
     "source_description": "47th St W through the Plaza to Brush Creek around Kauffman Lake to Rockhill to 43rd St.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6976675",
@@ -912,7 +993,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "43rd to Rockhilll, UMKC Stairs, 51st - Rockwell - Westwood, Wyoming, 47th, Mill Creek Park",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6947899",
@@ -927,7 +1009,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Crestwood from 55th and back on Morningside",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6943413",
@@ -942,7 +1025,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Bellevue S to 63rd E to Morningside N to 57th to the Trolley Trail to 51st and back to the park.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6927867",
@@ -957,7 +1041,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Mission Hills Detour avoiding 63rd St and going back on Meyer Blvd to Trolley Trail.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6886331",
@@ -972,7 +1057,8 @@
     "garmin_embed_url": "",
     "source_name": "Olathe - Hampton Park",
     "source_description": "Indian Creek Trail from Olathe",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6823543",
@@ -987,7 +1073,13 @@
     "garmin_embed_url": "",
     "source_name": "Case Park",
     "source_description": "7th St E Washington N 8th E to Delaware St N to 3rd St E to Main St N to Riverfront Trail to Casino and back",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": [
+      "2025-12-28",
+      "2025-09-28",
+      "2025-06-08",
+      "2025-03-30"
+    ]
   },
   {
     "route_id": "6819390",
@@ -1002,7 +1094,8 @@
     "garmin_embed_url": "",
     "source_name": "Case Park &; Riverfront Trail - Berkley Park",
     "source_description": "Case Park to 8th St E to Main St N to 3rd St E to Main St N to Riverfront Trail to Casino and back",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6776046",
@@ -1017,7 +1110,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "47th to Roanoke to Bell N to 39th to Wyoming N to Valentine Rd and S on Pennsylvania - Part of the Valentine Run",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6753570",
@@ -1032,7 +1126,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "Trolley Trail to 63rd St via Oak St.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6753504",
@@ -1047,7 +1142,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "Hyde Park - Wyandotte N to 36th St E to Harrison S to Gillham to 42nd St. to Oak S to 43rd St and back to the start.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6750436",
@@ -1062,7 +1158,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "North up Wyandotte to Liberty Memorial and back",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6722985",
@@ -1077,7 +1174,8 @@
     "garmin_embed_url": "",
     "source_name": "Line Creek Trail",
     "source_description": "Starting at N. Gower Rd & NW Waukomis Dr. by 68th St and going north to Barry Road and back.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6650254",
@@ -1092,7 +1190,8 @@
     "garmin_embed_url": "",
     "source_name": "Wolfe",
     "source_description": "59th to Trolley Trail & back",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6618316",
@@ -1107,7 +1206,8 @@
     "garmin_embed_url": "",
     "source_name": "Valentine - Liberty Memorial",
     "source_description": "Karnes to 34th to Coleman Rd to Scout to Liberty Memorial",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6618196",
@@ -1122,7 +1222,13 @@
     "garmin_embed_url": "",
     "source_name": "Mission Hills City Hall",
     "source_description": "Tomahawk Rd to 71st Terrace to Belinder N to Tomahawk Rd",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": [
+      "2026-03-15",
+      "2025-12-21",
+      "2025-09-21",
+      "2025-06-15"
+    ]
   },
   {
     "route_id": "6607151",
@@ -1137,7 +1243,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Mission Drive",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6595287",
@@ -1152,7 +1259,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Mission Hills 2 - Summit to 59 St W to Mission N to 56th St E to Ward Parkway S to Westover to Wyandotte S to 51st",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6576271",
@@ -1167,7 +1275,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Pennsylvania S. to 63rd St W to Ward Parkway N to Westover E to Wyandotte S to 51st W to Loose Park",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6552094",
@@ -1182,7 +1291,8 @@
     "garmin_embed_url": "",
     "source_name": "Kauffman Center - East to Benton and back",
     "source_description": "East on Brush Creek Sidewalk past Paseo & Prospect to Benton and back.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6523693",
@@ -1197,7 +1307,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "43rd E to Rockhill to Brush Creek N to 47th E to Mill Creek and REPEAT.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6503711",
@@ -1212,7 +1323,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "Mill Creek W through Plaza to Brush Creek E to Paseo and back to Rockhill N to 43rd back to Mill Creek",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6501013",
@@ -1227,7 +1339,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "Mill Creek to Main S to 49th W to Main S to 55th W to Ward Parkway N to Sunset back to Mill Creek",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6484473",
@@ -1242,7 +1355,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "47th St W thru the Plaza N on Roanoke to Westport Rd and S on Rainbow to 50th St E to Brush Creek E to Mill Creek Park.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6476800",
@@ -1257,7 +1371,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "Gillham Park, Kauffman Lake, Brush Creek path, back E on 47th to Mill Creek Park",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6472282",
@@ -1272,7 +1387,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "Westport Rd to State Line to 38th to Wyoming to Karnes to 31st to Pennyslvania",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6457699",
@@ -1287,7 +1403,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "Mill Creek to 47th St W to Madison South to sidewalk along Brush Creek E to Rockhill N to 43rd back to Start",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6446840",
@@ -1302,7 +1419,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "From Loose Park to Gillham Park and back via Rockhill & Trolley Trail to 51st St",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6444023",
@@ -1317,7 +1435,8 @@
     "garmin_embed_url": "",
     "source_name": "Crossroads, BBQ Tour",
     "source_description": "Meet at Lidias in Crossroads, Baltimore N. to 18th E to Brooklyn N to 22nd west to Grand N to 20th to Baltimore S. to Lidias.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6433449",
@@ -1332,7 +1451,8 @@
     "garmin_embed_url": "",
     "source_name": "NKC - Macken Park",
     "source_description": "Macken Park, NKC",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6433132",
@@ -1347,7 +1467,8 @@
     "garmin_embed_url": "",
     "source_name": "Jazz District",
     "source_description": "Jazz District, Paseo, 10th, Wyandotte, 18th",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6420904",
@@ -1362,7 +1483,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Crestwood - 51st to Cherry to Kenwood to 61st and back the Trolley Trail",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6396614",
@@ -1377,7 +1499,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "3 miles",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6389355",
@@ -1392,7 +1515,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "55th, Ward Pkwy, 63rd, Trolley Trail, 51st",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6381115",
@@ -1407,7 +1531,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Brush Creek Trail E. to 71",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6380664",
@@ -1422,7 +1547,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Westwood Park, Plaza, Mill Creek, Nelson Atkins, UMKC (no stairs!)",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6372317",
@@ -1437,7 +1563,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Pennsylvania S. to 63rd to Ward Parkway N to Westover to Wyandotte N. to 51st east to Trolley Trail N. to 55th and back to Loose Park",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6342072",
@@ -1452,7 +1579,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Out and back on the Trolley trail",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6338943",
@@ -1467,7 +1595,8 @@
     "garmin_embed_url": "",
     "source_name": "City Market - Berkley Park",
     "source_description": "Berkley Park Riverfront Heritage Trail",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6327114",
@@ -1482,7 +1611,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Nelson Atkins, 42nd St., Gillham Park, Cleaver II, Rockhill, Volker, Wornall hill",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6320409",
@@ -1497,7 +1627,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "West Plaza, 47th St to Mill Creek, 43rd down Rockhill to Cherry and down UMKC steps",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6319381",
@@ -1512,7 +1643,8 @@
     "garmin_embed_url": "",
     "source_name": "Swope Park",
     "source_description": "Gregory to Lakeside to Lewis to 63rd St",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6319353",
@@ -1527,7 +1659,8 @@
     "garmin_embed_url": "",
     "source_name": "Longview Lake",
     "source_description": "Start at Longview & Raytown Rd",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6319328",
@@ -1542,7 +1675,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "N. on Penn, Liberty Memorial, S. on Wyandotte",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6312484",
@@ -1557,7 +1691,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Crestwood - starting from 55th - shorter 4.5 mile route",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6288741",
@@ -1572,7 +1707,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Wornall, Westport Rd, 40th St, Oak, 55th",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6281823",
@@ -1587,7 +1723,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "55th, Trolley Trail, Valley, Pennsylvania",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6281681",
@@ -1602,7 +1739,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Belleview/63rd/Trolley Trail",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6257148",
@@ -1617,7 +1755,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Pennsylvania S. to 61st to Belleview N to Westover to Wyandotte N. to 49th to Main W. to 51st",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6242761",
@@ -1632,7 +1771,8 @@
     "garmin_embed_url": "",
     "source_name": "You Say Tomato",
     "source_description": "",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6242740",
@@ -1647,7 +1787,10 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek Steamway Trail",
     "source_description": "",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": [
+      "2025-05-04"
+    ]
   },
   {
     "route_id": "6241354",
@@ -1662,7 +1805,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Mission Hills EXTENDED - 55th to High Dr to 63rd to Ward Parkway to Gregory and back Trolley Trail to 51st",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6240908",
@@ -1677,7 +1821,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Mission Hills - 55th to High Dr to 63rd and back Trolley Trail to 51st",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6226633",
@@ -1692,7 +1837,13 @@
     "garmin_embed_url": "",
     "source_name": "Kauffman Gardens",
     "source_description": "Kauffman Center Lake, Brush Creek to Madison, east on 47th to Mill Creek, north to 43rd, north to 42nd, east through Gillham Park Trail to Harrison back to Kauffman Gardens",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": [
+      "2026-02-01",
+      "2025-11-02",
+      "2025-08-17",
+      "2025-05-18"
+    ]
   },
   {
     "route_id": "6193810",
@@ -1707,7 +1858,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "Mill Creek, Wornall hill, Loose Park, Summit, 59th, Trolley Trail, Mill Creek",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6190628",
@@ -1722,7 +1874,13 @@
     "garmin_embed_url": "",
     "source_name": "Hyde Park",
     "source_description": "Kauffman Legacy Lake",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": [
+      "2026-03-01",
+      "2025-12-07",
+      "2025-09-07",
+      "2025-06-01"
+    ]
   },
   {
     "route_id": "6187384",
@@ -1737,7 +1895,10 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "43rd, State Line, 39th, Wyoming, Karnes, 31st, Pennsylvania",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": [
+      "2026-03-18"
+    ]
   },
   {
     "route_id": "6180882",
@@ -1752,7 +1913,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "Rockhilll, UMKC Stairs, 51st St to 52nd St down Sunset to the Plaza, across the pedestrian bridge to Ward Parkway east to Mill Creek Park.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6161459",
@@ -1767,7 +1929,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Jingle Bell Plaza Run",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6161449",
@@ -1782,7 +1945,8 @@
     "garmin_embed_url": "",
     "source_name": "Crestwood",
     "source_description": "Jingle Bell-Plaza, West Plaza, Brush Creek, Nelson",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6159093",
@@ -1797,7 +1961,8 @@
     "garmin_embed_url": "",
     "source_name": "Case Park",
     "source_description": "Pennsylvania south to West Pennway, SW Blvd to Cherry N to 9th St and then back west",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6152037",
@@ -1812,7 +1977,8 @@
     "garmin_embed_url": "",
     "source_name": "Parkville - 2",
     "source_description": "River to Path down Main back to River",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6152026",
@@ -1827,7 +1993,8 @@
     "garmin_embed_url": "",
     "source_name": "Parkville MO - 1",
     "source_description": "River up Main to Park University",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6142819",
@@ -1842,7 +2009,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "43rd, State Line, 39th, Wyoming, Karnes, 31st, Broadway",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6123123",
@@ -1857,7 +2025,8 @@
     "garmin_embed_url": "",
     "source_name": "Hyde Park",
     "source_description": "",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6114381",
@@ -1872,7 +2041,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "43rd to Rockhill, UMKC Steps, Loose Park loop, 55th to Sunset back to Mill Creek.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6114380",
@@ -1887,7 +2057,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "Mill Creek south to 51st to Loose Park loop to 55th St. to Sunset back to Mill Creek.",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6109882",
@@ -1902,7 +2073,8 @@
     "garmin_embed_url": "",
     "source_name": "Valentine",
     "source_description": "Pedestrian bridge, skate park, and Scout",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6095074",
@@ -1917,7 +2089,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "51st, Cherry, Rockhill, 43rd, Mill Creek, Plaza, Sunset Dr",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6087051",
@@ -1932,7 +2105,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "51st, Trolley Trail, Meyer, Ward Parkway, 55th",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6061177",
@@ -1947,7 +2121,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "N on Pennsylvania, around Penn Valley Lake, S on Pennsylvania to Mill Creek Park",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6061161",
@@ -1962,7 +2137,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "the Trail, 61st, Wornall, Broadway, 43rd",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6061155",
@@ -1977,7 +2153,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "47th, Rainbow, 50th, Rockwell, 51st, the Trail",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6061151",
@@ -1992,7 +2169,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "47th, Wyoming, Westwood, 51st, Cherry, Rockhill, 43rd",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6061149",
@@ -2007,7 +2185,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "Gillham, 27th, Main",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6061146",
@@ -2022,7 +2201,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "Warwick, Rockhill, 57th, the Trail",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6061137",
@@ -2037,7 +2217,8 @@
     "garmin_embed_url": "",
     "source_name": "Mill Creek",
     "source_description": "43rd, Mission, 47th",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6060067",
@@ -2052,7 +2233,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "State Line, 39th St, Wyoming",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6060065",
@@ -2067,7 +2249,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Mill Creek Park - Sunset Dr, Mill Creek, The Nelson",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6060061",
@@ -2082,7 +2265,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "59th, Troost, Volker",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6056878",
@@ -2097,7 +2281,8 @@
     "garmin_embed_url": "",
     "source_name": "Tomahawk Creek Trail",
     "source_description": "Long route - 7 miles",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6052735",
@@ -2112,7 +2297,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Belleview/63rd/Trolley Trail",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6044126",
@@ -2127,7 +2313,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "West Plaza, Westwood, Shawnee Mission Tunnel, FairwayMission Hills",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6029164",
@@ -2142,7 +2329,8 @@
     "garmin_embed_url": "",
     "source_name": "Waldo",
     "source_description": "South Trolley Trail and Sunnyside Park",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6025122",
@@ -2157,7 +2345,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Summit south to Gregory & back the Trolley Trail",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6025119",
@@ -2172,7 +2361,10 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Summit south to 63rd east to Trolley Trail back to park",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": [
+      "2026-03-11"
+    ]
   },
   {
     "route_id": "6015378",
@@ -2187,7 +2379,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Oklahoma Joe's shorter route",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6008848",
@@ -2202,7 +2395,8 @@
     "garmin_embed_url": "",
     "source_name": "Kearney",
     "source_description": "Kearney Trail",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6003283",
@@ -2217,7 +2411,8 @@
     "garmin_embed_url": "",
     "source_name": "Valentine",
     "source_description": "South on Pennsylvania to Westport Rd west to Roanoke Rd south",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6003276",
@@ -2232,7 +2427,8 @@
     "garmin_embed_url": "",
     "source_name": "Valentine",
     "source_description": "South on Wyandotte to Westport Rd West to Roanoke & South",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6000126",
@@ -2247,7 +2443,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Oklahoma Joe's",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "6000078",
@@ -2262,7 +2459,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Loose Park to Brush Creek East to Troost",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5994850",
@@ -2277,7 +2475,8 @@
     "garmin_embed_url": "",
     "source_name": "Armour Hills - Extended Run",
     "source_description": "Armour Hills 6 Mile Run",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5989146",
@@ -2292,7 +2491,8 @@
     "garmin_embed_url": "",
     "source_name": "Indian Creek Trail West",
     "source_description": "Indian Creek Trail West to College Blvd",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5989140",
@@ -2307,7 +2507,10 @@
     "garmin_embed_url": "",
     "source_name": "Indian Creek Trail East",
     "source_description": "Indian Creek Trail East To Roe Ave",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": [
+      "2025-07-19"
+    ]
   },
   {
     "route_id": "5973029",
@@ -2322,7 +2525,8 @@
     "garmin_embed_url": "",
     "source_name": "Tomahawk Creek Trail",
     "source_description": "Meet at 105th",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5973024",
@@ -2337,7 +2541,8 @@
     "garmin_embed_url": "",
     "source_name": "Waldo - 6 Miles",
     "source_description": "Meet at 74th - Trolley Trail north to 55th St and back",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5973011",
@@ -2352,7 +2557,8 @@
     "garmin_embed_url": "",
     "source_name": "Armour Hills",
     "source_description": "Meet at 63rd",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5965565",
@@ -2367,7 +2573,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "55th, Ward Pkwy, 63rd, Trolley Trail, 51st",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5962689",
@@ -2382,7 +2589,8 @@
     "garmin_embed_url": "",
     "source_name": "Little Blue Trace Trail - 5 Miles",
     "source_description": "Little Blue Trace Trail - 5 Miles - To RD Mize Rd",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5962677",
@@ -2397,7 +2605,8 @@
     "garmin_embed_url": "",
     "source_name": "Little Blue Trace Trail - 10 Miles",
     "source_description": "10 Miles - To Truman Rd",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5956676",
@@ -2412,7 +2621,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Crestwood - 51st to Cherry to Kenwood to 63rd and back the Trolley Trail",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5949899",
@@ -2427,7 +2637,8 @@
     "garmin_embed_url": "",
     "source_name": "Westport Run",
     "source_description": "Westport, Penn Valley Park, Liberty Memorial",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5948214",
@@ -2442,7 +2653,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Westwood Park, Plaza, Mill Creek, Nelson Atkins, UMKC Stairs",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5940489",
@@ -2457,7 +2669,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "51st/Wyandotte/Trolley Trail/63rd/Summit",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5925620",
@@ -2472,7 +2685,8 @@
     "garmin_embed_url": "",
     "source_name": "Cliff Dr",
     "source_description": "Longer option",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5925062",
@@ -2487,7 +2701,11 @@
     "garmin_embed_url": "",
     "source_name": "Cliff Dr",
     "source_description": "Short option",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": [
+      "2025-10-26",
+      "2025-07-27"
+    ]
   },
   {
     "route_id": "5924309",
@@ -2502,7 +2720,8 @@
     "garmin_embed_url": "",
     "source_name": "Crestwood",
     "source_description": "",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5924308",
@@ -2517,7 +2736,8 @@
     "garmin_embed_url": "",
     "source_name": "City Market",
     "source_description": "Heritage Trail to KCK",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5924305",
@@ -2532,7 +2752,8 @@
     "garmin_embed_url": "",
     "source_name": "Nelson Atkins",
     "source_description": "Sculpture Park, Kauffman Legacy Lake, Hyde Park",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5924303",
@@ -2547,7 +2768,8 @@
     "garmin_embed_url": "",
     "source_name": "Westport",
     "source_description": "",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5924302",
@@ -2562,7 +2784,10 @@
     "garmin_embed_url": "",
     "source_name": "Mission Hills - Arno Park",
     "source_description": "",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": [
+      "2025-05-25"
+    ]
   },
   {
     "route_id": "5924300",
@@ -2577,7 +2802,8 @@
     "garmin_embed_url": "",
     "source_name": "Valentine",
     "source_description": "Roanoke Park",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5924294",
@@ -2592,7 +2818,8 @@
     "garmin_embed_url": "",
     "source_name": "Loose Park",
     "source_description": "Wornall, Westport Rd, 40th St, Oak, 51st",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   },
   {
     "route_id": "5907654",
@@ -2607,6 +2834,7 @@
     "garmin_embed_url": "",
     "source_name": "Hyde Park",
     "source_description": "",
-    "notes": ""
+    "notes": "",
+    "last_run_dates": []
   }
 ]
