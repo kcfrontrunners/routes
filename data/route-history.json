@@ -1,123 +1,31 @@
 {
-  "updated_at": "2026-03-23T00:38:59Z",
+  "updated_at": "2026-03-28T18:50:56Z",
   "history": {
-    "7796655": {
-      "display_name": "North Johnson County 3",
+    "5924302": {
+      "display_name": "Mission Hills - Arno Park",
       "last_run_dates": [
-        "2026-02-22",
-        "2025-11-30"
+        "2025-05-25"
       ]
     },
-    "7771705": {
-      "display_name": "Lawrence - Burroughs Creek Trail",
+    "5925062": {
+      "display_name": "Cliff Dr",
       "last_run_dates": [
-        "2025-11-16"
+        "2025-10-26",
+        "2025-07-27"
       ]
     },
-    "7749357": {
-      "display_name": "Line Creek Trail - Start in Riverside",
-      "last_run_dates": [
-        "2025-12-14",
-        "2025-09-14",
-        "2025-06-22",
-        "2025-03-23"
-      ]
-    },
-    "7739549": {
-      "display_name": "Parkville MO - New Trail",
-      "last_run_dates": [
-        "2025-08-03"
-      ]
-    },
-    "7730652": {
-      "display_name": "Indian Creek Trail in Missouri",
-      "last_run_dates": [
-        "2026-01-18",
-        "2025-10-19",
-        "2025-08-24",
-        "2025-04-20"
-      ]
-    },
-    "7631533": {
-      "display_name": "Volker",
-      "last_run_dates": [
-        "2026-01-11",
-        "2025-10-12",
-        "2025-07-13",
-        "2025-04-13"
-      ]
-    },
-    "7181614": {
-      "display_name": "Scout (Old Westport)",
-      "last_run_dates": [
-        "2025-06-29"
-      ]
-    },
-    "6823543": {
-      "display_name": "Case Park",
-      "last_run_dates": [
-        "2025-12-28",
-        "2025-09-28",
-        "2025-06-08",
-        "2025-03-30"
-      ]
-    },
-    "6618196": {
-      "display_name": "Mission Hills City Hall",
-      "last_run_dates": [
-        "2026-03-15",
-        "2025-12-21",
-        "2025-09-21",
-        "2025-06-15"
-      ]
-    },
-    "6242740": {
-      "display_name": "Mill Creek Steamway Trail",
-      "last_run_dates": [
-        "2025-05-04"
-      ]
-    },
-    "6226633": {
-      "display_name": "Kauffman Gardens",
-      "last_run_dates": [
-        "2026-02-01",
-        "2025-11-02",
-        "2025-08-17",
-        "2025-05-18"
-      ]
-    },
-    "6190628": {
-      "display_name": "Hyde Park",
-      "last_run_dates": [
-        "2026-03-01",
-        "2025-12-07",
-        "2025-09-07",
-        "2025-06-01"
-      ]
-    },
-    "6187384": {
-      "display_name": "Mill Creek",
-      "last_run_dates": [
-        "2026-03-18"
-      ]
-    },
-    "6025119": {
+    "5940489": {
       "display_name": "Loose Park",
       "last_run_dates": [
-        "2026-03-11"
+        "2025-09-03"
       ]
     },
-    "5989140": {
-      "display_name": "Indian Creek Trail East",
+    "5973011": {
+      "display_name": "Armour Hills",
       "last_run_dates": [
-        "2025-07-19"
-      ]
-    },
-    "5973029": {
-      "display_name": "Tomahawk Creek Trail",
-      "last_run_dates": [
-        "2026-01-25",
-        "2025-04-27"
+        "2026-01-04",
+        "2025-10-05",
+        "2025-07-06"
       ]
     },
     "5973024": {
@@ -129,25 +37,282 @@
         "2025-05-11"
       ]
     },
-    "5973011": {
-      "display_name": "Armour Hills",
+    "5973029": {
+      "display_name": "Tomahawk Creek Trail",
       "last_run_dates": [
-        "2026-01-04",
-        "2025-10-05",
-        "2025-07-06"
+        "2026-01-25",
+        "2025-04-27"
       ]
     },
-    "5925062": {
-      "display_name": "Cliff Dr",
+    "5989140": {
+      "display_name": "Indian Creek Trail East",
       "last_run_dates": [
-        "2025-10-26",
-        "2025-07-27"
+        "2025-07-19"
       ]
     },
-    "5924302": {
-      "display_name": "Mission Hills - Arno Park",
+    "6025119": {
+      "display_name": "Loose Park",
       "last_run_dates": [
-        "2025-05-25"
+        "2026-03-11",
+        "2025-04-09"
+      ]
+    },
+    "6052735": {
+      "display_name": "Loose Park",
+      "last_run_dates": [
+        "2025-09-10",
+        "2025-07-23",
+        "2025-04-02"
+      ]
+    },
+    "6061177": {
+      "display_name": "Mill Creek",
+      "last_run_dates": [
+        "2026-03-11",
+        "2026-02-11",
+        "2026-01-21",
+        "2025-11-12"
+      ]
+    },
+    "6095074": {
+      "display_name": "Loose Park",
+      "last_run_dates": [
+        "2025-08-27",
+        "2025-08-06",
+        "2025-07-02"
+      ]
+    },
+    "6180882": {
+      "display_name": "Mill Creek",
+      "last_run_dates": [
+        "2026-03-04",
+        "2025-12-17",
+        "2025-11-19"
+      ]
+    },
+    "6187384": {
+      "display_name": "Mill Creek",
+      "last_run_dates": [
+        "2026-03-18"
+      ]
+    },
+    "6190628": {
+      "display_name": "Hyde Park",
+      "last_run_dates": [
+        "2026-03-01",
+        "2025-12-07",
+        "2025-09-07",
+        "2025-06-01"
+      ]
+    },
+    "6226633": {
+      "display_name": "Kauffman Gardens",
+      "last_run_dates": [
+        "2026-02-01",
+        "2025-11-02",
+        "2025-08-17",
+        "2025-05-18"
+      ]
+    },
+    "6240908": {
+      "display_name": "Loose Park",
+      "last_run_dates": [
+        "2025-05-21",
+        "2025-04-23"
+      ]
+    },
+    "6242740": {
+      "display_name": "Mill Creek Steamway Trail",
+      "last_run_dates": [
+        "2025-05-04"
+      ]
+    },
+    "6380664": {
+      "display_name": "Loose Park",
+      "last_run_dates": [
+        "2025-07-09"
+      ]
+    },
+    "6396614": {
+      "display_name": "Loose Park",
+      "last_run_dates": [
+        "2025-06-25"
+      ]
+    },
+    "6446840": {
+      "display_name": "Loose Park",
+      "last_run_dates": [
+        "2025-07-30",
+        "2025-05-28"
+      ]
+    },
+    "6457699": {
+      "display_name": "Mill Creek",
+      "last_run_dates": [
+        "2026-01-28",
+        "2026-01-14"
+      ]
+    },
+    "6523693": {
+      "display_name": "Mill Creek",
+      "last_run_dates": [
+        "2025-12-03"
+      ]
+    },
+    "6576271": {
+      "display_name": "Loose Park",
+      "last_run_dates": [
+        "2025-09-24",
+        "2025-06-04",
+        "2025-05-07"
+      ]
+    },
+    "6595287": {
+      "display_name": "Loose Park",
+      "last_run_dates": [
+        "2025-09-17",
+        "2025-08-20",
+        "2025-05-14"
+      ]
+    },
+    "6618196": {
+      "display_name": "Mission Hills City Hall",
+      "last_run_dates": [
+        "2026-03-15",
+        "2025-12-21",
+        "2025-09-21",
+        "2025-06-15"
+      ]
+    },
+    "6753504": {
+      "display_name": "Mill Creek",
+      "last_run_dates": [
+        "2026-02-04"
+      ]
+    },
+    "6753570": {
+      "display_name": "Mill Creek",
+      "last_run_dates": [
+        "2026-03-25",
+        "2026-02-18",
+        "2025-11-05"
+      ]
+    },
+    "6823543": {
+      "display_name": "Case Park",
+      "last_run_dates": [
+        "2025-12-28",
+        "2025-09-28",
+        "2025-06-08",
+        "2025-03-30"
+      ]
+    },
+    "6947899": {
+      "display_name": "Loose Park",
+      "last_run_dates": [
+        "2025-06-18"
+      ]
+    },
+    "7086395": {
+      "display_name": "Loose Park",
+      "last_run_dates": [
+        "2025-04-30",
+        "2025-04-16"
+      ]
+    },
+    "7181614": {
+      "display_name": "Scout (Old Westport)",
+      "last_run_dates": [
+        "2025-06-29"
+      ]
+    },
+    "7432479": {
+      "display_name": "Mill Creek",
+      "last_run_dates": [
+        "2025-12-31"
+      ]
+    },
+    "7551726": {
+      "display_name": "Mill Creek",
+      "last_run_dates": [
+        "2026-02-25"
+      ]
+    },
+    "7572631": {
+      "display_name": "Loose Park",
+      "last_run_dates": [
+        "2025-06-11"
+      ]
+    },
+    "7591684": {
+      "display_name": "Loose Park",
+      "last_run_dates": [
+        "2025-08-13"
+      ]
+    },
+    "7631533": {
+      "display_name": "Volker",
+      "last_run_dates": [
+        "2026-01-11",
+        "2025-10-12",
+        "2025-07-13",
+        "2025-04-13"
+      ]
+    },
+    "7683411": {
+      "display_name": "Loose Park",
+      "last_run_dates": [
+        "2025-10-22"
+      ]
+    },
+    "7685339": {
+      "display_name": "Loose Park",
+      "last_run_dates": [
+        "2025-10-08"
+      ]
+    },
+    "7730652": {
+      "display_name": "Indian Creek Trail in Missouri",
+      "last_run_dates": [
+        "2026-01-18",
+        "2025-10-19",
+        "2025-08-24",
+        "2025-04-20"
+      ]
+    },
+    "7739549": {
+      "display_name": "Parkville MO - New Trail",
+      "last_run_dates": [
+        "2025-08-03"
+      ]
+    },
+    "7749357": {
+      "display_name": "Line Creek Trail - Start in Riverside",
+      "last_run_dates": [
+        "2025-12-14",
+        "2025-09-14",
+        "2025-06-22",
+        "2025-03-23"
+      ]
+    },
+    "7771705": {
+      "display_name": "Lawrence - Burroughs Creek Trail",
+      "last_run_dates": [
+        "2025-11-16"
+      ]
+    },
+    "7796655": {
+      "display_name": "North Johnson County 3",
+      "last_run_dates": [
+        "2026-02-22",
+        "2025-11-30"
+      ]
+    },
+    "7798129": {
+      "display_name": "Crestwood Starting from Picnic Shelter",
+      "last_run_dates": [
+        "2025-10-29",
+        "2025-10-01"
       ]
     }
   }
