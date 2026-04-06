@@ -34,6 +34,9 @@ import urllib.parse
 import urllib.request
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
+
+KC_TZ = ZoneInfo("America/Chicago")
 
 
 # ---------------------------------------------------------------------------
@@ -114,12 +117,22 @@ def fetch_events(calendar_id: str, api_key: str, days_back: int) -> list[dict]:
 
 
 def event_date(item: dict) -> date | None:
+    """Return the KC-local calendar date of the event.
+
+    Google Calendar may return dateTime in the event's local timezone
+    (e.g. -05:00 CDT) or in UTC (with Z suffix).  We always convert to
+    America/Chicago so that late-evening events (e.g. a 9 PM CDT Wednesday
+    run = 02:00 UTC Thursday) are recorded on the correct KC calendar date,
+    not the following UTC day.  The Z-suffix replacement also ensures
+    compatibility with Python < 3.11 where fromisoformat rejects 'Z'.
+    """
     start = item.get("start", {})
     date_time = start.get("dateTime")
     if date_time:
         try:
-            return datetime.fromisoformat(date_time).date()
-        except ValueError:
+            dt = datetime.fromisoformat(date_time.replace("Z", "+00:00"))
+            return dt.astimezone(KC_TZ).date()
+        except (ValueError, KeyError):
             pass
     date_only = start.get("date")
     if date_only:
