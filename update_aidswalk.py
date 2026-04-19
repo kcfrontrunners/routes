@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Scrapes the KC Frontrunners & Walkers fundraising total from the
-AIDS Walk Kansas City team list and writes data/aidswalk.json.
+Scrapes the KC Frontrunners & Walkers fundraising total from their
+AIDS Walk Kansas City team page and writes data/aidswalk.json.
 
 Run manually or via GitHub Actions (.github/workflows/update-aidswalk.yml).
 """
@@ -12,32 +12,40 @@ from datetime import date
 
 import requests
 
-URL = "https://www.aidswalkkansascity.org/Static/Team-List"
-TEAM = "Kansas City Frontrunners"
+# Team's own page — has a dedicated <span class="was-raised"> element
+URL = "https://www.aidswalkkansascity.org/kcfrontrunners"
 DONATE_URL = "https://www.aidswalkkansascity.org/Donate/Index/2107845"
 OUT_PATH = "data/aidswalk.json"
+
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (X11; Linux x86_64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0 Safari/537.36"
+    )
+}
 
 
 def main():
     print(f"Fetching {URL} …")
-    resp = requests.get(URL, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
+    resp = requests.get(URL, timeout=20, headers=HEADERS)
     resp.raise_for_status()
     html = resp.text
 
-    idx = html.find(TEAM)
-    if idx == -1:
-        print(f"ERROR: Team '{TEAM}' not found on page.", file=sys.stderr)
-        sys.exit(1)
+    # Primary: <span class="was-raised">$5,200</span>
+    m = re.search(r'class="was-raised">\s*\$([\d,]+)', html)
 
-    # Dollar amount appears within a few thousand characters after the team name
-    # (member links, table cells, etc. push it further out in raw HTML)
-    snippet = html[idx : idx + 3000]
-    m = re.search(r"\$([\d,]+(?:\.\d{2})?)", snippet)
+    # Fallback: tableColRaised cell on team list page (older layout)
     if not m:
-        print("ERROR: No dollar amount found near team name.", file=sys.stderr)
+        m = re.search(r'tableColRaised">\s*\$([\d,]+)', html)
+
+    if not m:
+        # Dump a diagnostic snippet so we can debug in Actions logs
+        print("ERROR: Could not find raised amount. First 2000 chars of response:", file=sys.stderr)
+        print(html[:2000], file=sys.stderr)
         sys.exit(1)
 
-    raised = int(m.group(1).replace(",", "").split(".")[0])
+    raised = int(m.group(1).replace(",", ""))
 
     out = {
         "raised": raised,
