@@ -29,8 +29,9 @@ def main():
         print(f"ERROR: Team '{TEAM}' not found on page.", file=sys.stderr)
         sys.exit(1)
 
-    # Dollar amount appears within a few hundred characters after the team name
-    snippet = html[idx : idx + 600]
+    # Dollar amount appears within a few thousand characters after the team name
+    # (member links, table cells, etc. push it further out in raw HTML)
+    snippet = html[idx : idx + 3000]
     m = re.search(r"\$([\d,]+(?:\.\d{2})?)", snippet)
     if not m:
         print("ERROR: No dollar amount found near team name.", file=sys.stderr)
