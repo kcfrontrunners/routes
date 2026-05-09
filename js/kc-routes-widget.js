@@ -130,8 +130,8 @@
       '@keyframes kc-spin{to{transform:rotate(360deg)}}',
 
       /* Close button */
-      '#kc-modal-close{position:absolute;top:14px;left:14px;z-index:9999;width:36px;height:36px;border-radius:50%;background:rgba(30,30,38,.85);border:1px solid rgba(255,255,255,.18);color:#F0EDE8;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s;box-shadow:0 2px 8px rgba(0,0,0,.4);line-height:1}',
-      '#kc-modal-close:hover{background:rgba(60,60,72,.95)}',
+      '#kc-modal-close{align-self:flex-start;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#F0EDE8;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s;line-height:1;flex-shrink:0}',
+      '#kc-modal-close:hover{background:rgba(255,255,255,.16)}',
 
       /* Leaflet light overrides */
       '.leaflet-container{background:#e8e8e8}',
@@ -382,7 +382,7 @@
       el('div', { id: 'kc-modal-elevation', style: 'display:none' })
     ]);
 
-    var inner = el('div', { id: 'kc-modal-inner' }, [closeBtn, infoPanel, mapWrap]);
+    var inner = el('div', { id: 'kc-modal-inner' }, [infoPanel, mapWrap]);
     var overlay = el('div', { id: 'kc-route-modal' }, [inner]);
     overlay.addEventListener('click', function(e) {
       if (e.target === overlay) closeModal();
@@ -405,6 +405,9 @@
     var originLabel = ORIGIN_LABELS[route.origin] || route.origin;
 
     infoPanel.innerHTML = '';
+    var closeBtn = el('button', { id: 'kc-modal-close', 'aria-label': 'Close' }, '×');
+    closeBtn.addEventListener('click', closeModal);
+    infoPanel.appendChild(closeBtn);
     infoPanel.appendChild(el('p', { className: 'kc-modal-eyebrow' }, originLabel));
     infoPanel.appendChild(el('h2', { className: 'kc-modal-name' }, route.display_name || route.source_name || 'Route'));
 
