@@ -54,7 +54,10 @@
       '#kc-routes-header{padding:48px 24px 32px;background:' + C.bg + ';max-width:var(--wp--style--global--content-size,1200px);margin:0 auto}',
 
       /* Sticky filter bar */
-      '#kc-routes-filters{position:sticky;top:0;z-index:100;background:' + C.bg + ';border-bottom:1px solid ' + C.border + ';padding:12px 24px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}',
+      '#kc-routes-filters{position:sticky;top:0;z-index:100;background:' + C.bg + ';border-bottom:1px solid ' + C.border + ';padding:12px 24px;display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end}',
+      '.kc-filter-group{display:flex;flex-direction:column;gap:4px}',
+      '.kc-filter-label{font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:' + C.muted + ';padding-left:2px}',
+      '.kc-filter-box{display:flex;gap:4px;flex-wrap:wrap;border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:5px 6px}',
       '#kc-routes-filters .kc-tab-group{display:flex;gap:4px;flex-wrap:wrap}',
       '.kc-tab{background:none;border:1px solid ' + C.border + ';color:' + C.muted + ';border-radius:8px;padding:6px 14px;font-size:.8rem;font-weight:600;cursor:pointer;transition:all .15s}',
       '.kc-tab:hover{border-color:rgba(255,255,255,.25);color:' + C.text + '}',
@@ -243,19 +246,27 @@
 
   function buildFilterBar() {
     // Origin tabs
-    var originTabs = el('div', { className: 'kc-tab-group' }, [
+    var originTabs = el('div', { className: 'kc-tab-group kc-filter-box' }, [
       makeTab('All', 'all', filterOrigin, setOrigin),
       makeTab('Loose Park', 'loose_park', filterOrigin, setOrigin),
       makeTab('Mill Creek', 'mill_creek', filterOrigin, setOrigin),
       makeTab('Sunday', 'sunday', filterOrigin, setOrigin)
     ]);
+    var originGroup = el('div', { className: 'kc-filter-group' }, [
+      el('span', { className: 'kc-filter-label' }, 'Category'),
+      originTabs
+    ]);
 
     // Distance pills
-    var distPills = el('div', { className: 'kc-dist-group' },
+    var distPills = el('div', { className: 'kc-dist-group kc-filter-box' },
       DIST_RANGES.map(function(r) {
         return makeTab(r.label, r.key, filterDistance, setDistance);
       })
     );
+    var distGroup = el('div', { className: 'kc-filter-group' }, [
+      el('span', { className: 'kc-filter-label' }, 'Distance'),
+      distPills
+    ]);
 
     // Search
     var search = el('input', {
@@ -285,7 +296,7 @@
     var count = el('span', { className: 'kc-count', id: 'kc-routes-count' }, '');
 
     return el('div', { id: 'kc-routes-filters' }, [
-      originTabs, distPills, search, sortBtn, count
+      originGroup, distGroup, search, sortBtn, count
     ]);
   }
 
@@ -756,6 +767,11 @@
     var firstChild = entry.firstElementChild;
     if (firstChild) entry.insertBefore(wrap, firstChild);
     else entry.appendChild(wrap);
+
+    // Hide any native WP archive/no-results content (e.g. "Archive: Routes, nothing found")
+    Array.from(entry.children).forEach(function(child) {
+      if (child.id !== 'kc-routes-wrap') child.style.display = 'none';
+    });
 
     buildModal();
     render();
