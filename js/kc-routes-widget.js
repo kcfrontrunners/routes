@@ -583,7 +583,9 @@
   function renderCardPreviewSVG(gpxText, container) {
     var parser = new DOMParser();
     var doc    = parser.parseFromString(gpxText, 'text/xml');
-    var nodes  = doc.querySelectorAll('trkpt');
+    // GPX files may use <trkpt> (track) or <rtept> (route); use namespace-wildcard to handle default-namespace GPX
+    var nodes  = doc.getElementsByTagNameNS('*', 'trkpt');
+    if (!nodes.length) nodes = doc.getElementsByTagNameNS('*', 'rtept');
     var trkpts = Array.from(nodes).map(function(pt) {
       return [parseFloat(pt.getAttribute('lat')), parseFloat(pt.getAttribute('lon'))];
     });
