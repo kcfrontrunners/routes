@@ -130,7 +130,7 @@
       '@keyframes kc-spin{to{transform:rotate(360deg)}}',
 
       /* Close button */
-      '#kc-modal-close{position:absolute;top:14px;right:14px;z-index:9999;width:36px;height:36px;border-radius:50%;background:rgba(30,30,38,.85);border:1px solid rgba(255,255,255,.18);color:#F0EDE8;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s;box-shadow:0 2px 8px rgba(0,0,0,.4);line-height:1}',
+      '#kc-modal-close{position:absolute;top:14px;left:14px;z-index:9999;width:36px;height:36px;border-radius:50%;background:rgba(30,30,38,.85);border:1px solid rgba(255,255,255,.18);color:#F0EDE8;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s;box-shadow:0 2px 8px rgba(0,0,0,.4);line-height:1}',
       '#kc-modal-close:hover{background:rgba(60,60,72,.95)}',
 
       /* Leaflet light overrides */
