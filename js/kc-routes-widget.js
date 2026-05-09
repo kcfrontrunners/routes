@@ -26,7 +26,7 @@
   var filterOrigin   = 'all';
   var filterDistance = 'all';
   var filterSearch   = '';
-  var sortDir        = 'asc';   // 'asc' | 'desc'
+  var sortDir        = 'alpha'; // 'alpha' | 'asc' | 'desc'
   var gpxCache          = {};
   var leafletMap        = null;
   var activeGpxLayer    = null;
@@ -76,7 +76,7 @@
       '.kc-route-card{background:' + C.surface + ';border:1px solid ' + C.border + ';border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px;cursor:pointer;transition:border-color .15s,transform .1s;overflow:hidden}',
 
       /* Card route preview */
-      '.kc-card-preview{margin:-20px -20px 0;height:90px;border-radius:14px 14px 0 0;overflow:hidden;background:rgba(0,0,0,.18);border-bottom:1px solid ' + C.border + ';position:relative;flex-shrink:0}',
+      '.kc-card-preview{margin:0 -20px;height:90px;border-radius:0;overflow:hidden;background:rgba(0,0,0,.18);border-top:1px solid ' + C.border + ';border-bottom:1px solid ' + C.border + ';position:relative;flex-shrink:0}',
       '.kc-card-preview svg{display:block;width:100%;height:100%}',
       '.kc-preview-shimmer{position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.05) 50%,transparent);background-size:200% 100%;animation:kc-shimmer 1.8s ease-in-out infinite}',
       '@keyframes kc-shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}',
@@ -210,6 +210,15 @@
         return true;
       })
       .sort(function(a, b) {
+        if (sortDir === 'alpha') {
+          var na = (a.display_name || a.source_name || '').toLowerCase();
+          var nb = (b.display_name || b.source_name || '').toLowerCase();
+          if (na !== nb) return na < nb ? -1 : 1;
+          // Tiebreak by description so e.g. many "Loose Park" routes are stable
+          var da = (a.display_description || a.source_description || '').toLowerCase();
+          var db = (b.display_description || b.source_description || '').toLowerCase();
+          return da < db ? -1 : da > db ? 1 : 0;
+        }
         return sortDir === 'asc'
           ? a.distance_miles - b.distance_miles
           : b.distance_miles - a.distance_miles;
@@ -262,11 +271,13 @@
     });
 
     // Sort button
-    var sortBtn = el('button', { className: 'kc-sort-btn' },
-      'Distance ' + (sortDir === 'asc' ? '\u2191' : '\u2193'));
+    function sortLabel() {
+      return sortDir === 'alpha' ? 'A \u2192 Z' : 'Distance ' + (sortDir === 'asc' ? '\u2191' : '\u2193');
+    }
+    var sortBtn = el('button', { className: 'kc-sort-btn' }, sortLabel());
     sortBtn.addEventListener('click', function() {
-      sortDir = sortDir === 'asc' ? 'desc' : 'asc';
-      sortBtn.textContent = 'Distance ' + (sortDir === 'asc' ? '\u2191' : '\u2193');
+      sortDir = sortDir === 'alpha' ? 'asc' : sortDir === 'asc' ? 'desc' : 'alpha';
+      sortBtn.textContent = sortLabel();
       render();
     });
 
@@ -322,7 +333,7 @@
       renderCardPreviewSVG(gpxCache[route.route_id], preview);
     }
 
-    var card = el('div', { className: 'kc-route-card' }, [preview, top, origin, desc, btn]);
+    var card = el('div', { className: 'kc-route-card' }, [top, preview, origin, desc, btn]);
     card.addEventListener('click', function() { openModal(route); });
     return card;
   }
