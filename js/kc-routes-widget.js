@@ -605,49 +605,101 @@
       .catch(function() { previewEl.innerHTML = ''; });
   }
 
+  // --- Tile math (Web Mercator) ------------------------------------------------
+  function lngToTileF(lon, z) {
+    return (lon + 180) / 360 * Math.pow(2, z);
+  }
+  function latToTileF(lat, z) {
+    var r = lat * Math.PI / 180;
+    return (1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * Math.pow(2, z);
+  }
+  function bestPreviewZoom(minLat, maxLat, minLon, maxLon, W, H) {
+    for (var z = 17; z >= 8; z--) {
+      var pw = (lngToTileF(maxLon, z) - lngToTileF(minLon, z)) * 256;
+      var ph = (latToTileF(minLat, z) - latToTileF(maxLat, z)) * 256;
+      if (pw < W * 0.72 && ph < H * 0.72) return z;
+    }
+    return 10;
+  }
+
   function renderCardPreviewSVG(gpxText, container) {
     var parser = new DOMParser();
     var doc    = parser.parseFromString(gpxText, 'text/xml');
-    // GPX files may use <trkpt> (track) or <rtept> (route); use namespace-wildcard to handle default-namespace GPX
+    // GPX files may use <trkpt> (track) or <rtept> (route); namespace-wildcard handles default-namespace GPX
     var nodes  = doc.getElementsByTagNameNS('*', 'trkpt');
     if (!nodes.length) nodes = doc.getElementsByTagNameNS('*', 'rtept');
     var trkpts = Array.from(nodes).map(function(pt) {
       return [parseFloat(pt.getAttribute('lat')), parseFloat(pt.getAttribute('lon'))];
     });
     if (trkpts.length < 2) { container.innerHTML = ''; return; }
-    container.innerHTML = drawTrackSVG(trkpts);
-  }
 
-  function drawTrackSVG(trkpts) {
     var lats   = trkpts.map(function(p) { return p[0]; });
     var lons   = trkpts.map(function(p) { return p[1]; });
     var minLat = Math.min.apply(null, lats), maxLat = Math.max.apply(null, lats);
     var minLon = Math.min.apply(null, lons), maxLon = Math.max.apply(null, lons);
+    var midLat = (minLat + maxLat) / 2, midLon = (minLon + maxLon) / 2;
 
-    var latRange = maxLat - minLat || 1e-6;
-    var lonRange = maxLon - minLon || 1e-6;
-    // Correct for longitude compression at this latitude
-    var cosLat   = Math.cos(((maxLat + minLat) / 2) * Math.PI / 180);
-    var adjLon   = lonRange * cosLat;
+    var W = container.offsetWidth || 300;
+    var H = container.offsetHeight || 90;
+    var z = bestPreviewZoom(minLat, maxLat, minLon, maxLon, W, H);
 
-    var W = 300, H = 90, pad = 16;
-    var innerW = W - pad * 2, innerH = H - pad * 2;
-    var scale  = Math.min(innerW / adjLon, innerH / latRange);
-    var usedW  = adjLon * scale, usedH = latRange * scale;
-    var offX   = pad + (innerW - usedW) / 2;
-    var offY   = pad + (innerH - usedH) / 2;
+    // Fractional tile coords of viewport center, then derive canvas origin (top-left)
+    var cx = lngToTileF(midLon, z),  cy = latToTileF(midLat, z);
+    var ox = cx - W / 2 / 256,       oy = cy - H / 2 / 256;
 
-    var pts = trkpts.map(function(p) {
-      var x = offX + (p[1] - minLon) * cosLat * scale;
-      var y = offY + (maxLat - p[0]) * scale; // flip y axis
-      return x.toFixed(1) + ',' + y.toFixed(1);
-    }).join(' ');
+    // Tile range to fetch
+    var tx0 = Math.floor(ox), tx1 = Math.ceil(ox + W / 256);
+    var ty0 = Math.floor(oy), ty1 = Math.ceil(oy + H / 256);
+    var maxT = Math.pow(2, z) - 1;
 
-    return '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="xMidYMid meet" ' +
-           'style="width:100%;height:100%">' +
-             '<polyline points="' + pts + '" fill="none" stroke="' + C.accent + '" ' +
-                       'stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>' +
-           '</svg>';
+    var canvas = document.createElement('canvas');
+    canvas.width = W; canvas.height = H;
+    var ctx = canvas.getContext('2d');
+
+    var total = (tx1 - tx0) * (ty1 - ty0), loaded = 0;
+    var subs  = ['a', 'b', 'c', 'd'];
+
+    function latLonToXY(lat, lon) {
+      return { x: (lngToTileF(lon, z) - ox) * 256, y: (latToTileF(lat, z) - oy) * 256 };
+    }
+
+    function drawRoute() {
+      ctx.beginPath();
+      var p0 = latLonToXY(trkpts[0][0], trkpts[0][1]);
+      ctx.moveTo(p0.x, p0.y);
+      for (var i = 1; i < trkpts.length; i++) {
+        var p = latLonToXY(trkpts[i][0], trkpts[i][1]);
+        ctx.lineTo(p.x, p.y);
+      }
+      ctx.strokeStyle = '#E05C52';
+      ctx.lineWidth   = 2.5;
+      ctx.lineJoin    = 'round';
+      ctx.lineCap     = 'round';
+      ctx.stroke();
+      if (document.body.contains(container)) {
+        container.innerHTML = '';
+        container.appendChild(canvas);
+      }
+    }
+
+    function onDone() { if (++loaded === total) drawRoute(); }
+
+    for (var ty = ty0; ty < ty1; ty++) {
+      for (var tx = tx0; tx < tx1; tx++) {
+        (function(tx, ty) {
+          // Clamp to valid tile range
+          var clampedX = Math.max(0, Math.min(maxT, tx));
+          var clampedY = Math.max(0, Math.min(maxT, ty));
+          var img   = new Image();
+          var sd    = subs[(Math.abs(clampedX) + Math.abs(clampedY)) % 4];
+          img.src   = 'https://' + sd + '.basemaps.cartocdn.com/rastertiles/voyager/' + z + '/' + clampedX + '/' + clampedY + '.png';
+          var destX = (tx - ox) * 256, destY = (ty - oy) * 256;
+          img.onload = function() { ctx.drawImage(img, destX, destY, 256, 256); onDone(); };
+          img.onerror = onDone;
+        })(tx, ty);
+      }
+    }
+    if (total === 0) drawRoute();
   }
 
   // --- Mile markers -----------------------------------------------------------
