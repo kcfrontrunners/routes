@@ -76,7 +76,7 @@
       '.kc-route-card{background:' + C.surface + ';border:1px solid ' + C.border + ';border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px;cursor:pointer;transition:border-color .15s,transform .1s;overflow:hidden}',
 
       /* Card route preview */
-      '.kc-card-preview{margin:0 -20px;height:90px;border-radius:0;overflow:hidden;background:rgba(0,0,0,.18);border-top:1px solid ' + C.border + ';border-bottom:1px solid ' + C.border + ';position:relative;flex-shrink:0}',
+      '.kc-card-preview{margin:-20px -20px 0;height:90px;border-radius:14px 14px 0 0;overflow:hidden;background:rgba(0,0,0,.18);border-bottom:1px solid ' + C.border + ';position:relative;flex-shrink:0}',
       '.kc-card-preview svg{display:block;width:100%;height:100%}',
       '.kc-preview-shimmer{position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.05) 50%,transparent);background-size:200% 100%;animation:kc-shimmer 1.8s ease-in-out infinite}',
       '@keyframes kc-shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}',
@@ -130,8 +130,8 @@
       '@keyframes kc-spin{to{transform:rotate(360deg)}}',
 
       /* Close button */
-      '#kc-modal-close{position:absolute;top:14px;right:14px;z-index:20;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.1);border:none;color:#fff;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s}',
-      '#kc-modal-close:hover{background:rgba(255,255,255,.2)}',
+      '#kc-modal-close{position:absolute;top:14px;right:14px;z-index:9999;width:36px;height:36px;border-radius:50%;background:rgba(30,30,38,.85);border:1px solid rgba(255,255,255,.18);color:#F0EDE8;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s;box-shadow:0 2px 8px rgba(0,0,0,.4);line-height:1}',
+      '#kc-modal-close:hover{background:rgba(60,60,72,.95)}',
 
       /* Leaflet light overrides */
       '.leaflet-container{background:#e8e8e8}',
@@ -333,7 +333,7 @@
       renderCardPreviewSVG(gpxCache[route.route_id], preview);
     }
 
-    var card = el('div', { className: 'kc-route-card' }, [top, preview, origin, desc, btn]);
+    var card = el('div', { className: 'kc-route-card' }, [preview, top, origin, desc, btn]);
     card.addEventListener('click', function() { openModal(route); });
     return card;
   }
