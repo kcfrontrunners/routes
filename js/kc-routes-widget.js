@@ -33,6 +33,7 @@
   var activeMileMarkers = [];
   var debounceTimer     = null;
   var previewObserver   = null;
+  var closeBtn          = null;
 
   var ORIGIN_LABELS = { loose_park: 'Loose Park', mill_creek: 'Mill Creek', sunday: 'Sunday' };
   var DIST_RANGES   = [
@@ -84,6 +85,7 @@
       '.kc-preview-shimmer{position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.05) 50%,transparent);background-size:200% 100%;animation:kc-shimmer 1.8s ease-in-out infinite}',
       '@keyframes kc-shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}',
       '.kc-route-card:hover{border-color:rgba(255,255,255,.22);transform:translateY(-1px)}',
+      '.kc-route-card:focus{outline:2px solid #F28C84;outline-offset:2px}',
       '.kc-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}',
       '.kc-card-name{font-size:.95rem;font-weight:600;color:' + C.text + ';line-height:1.3;flex:1}',
       '.kc-dist-badge{flex-shrink:0;font-size:.7rem;font-weight:700;letter-spacing:.05em;padding:3px 8px;border-radius:6px;white-space:nowrap}',
@@ -99,6 +101,8 @@
       /* Empty state */
       '#kc-routes-empty{display:none;text-align:center;padding:64px 24px;color:' + C.muted + '}',
       '#kc-routes-empty p{font-size:1rem;margin:8px 0 0}',
+      '.kc-reset-btn{margin-top:12px;padding:8px 18px;background:none;border:1px solid rgba(255,255,255,.2);color:#F0EDE8;border-radius:8px;cursor:pointer;font-size:.85rem;transition:border-color .15s}',
+      '.kc-reset-btn:hover{border-color:rgba(255,255,255,.4)}',
 
       /* Modal overlay */
       '#kc-route-modal{position:fixed;inset:0;z-index:9999;display:none;background:rgba(0,0,0,.75);backdrop-filter:blur(4px)}',
@@ -108,7 +112,7 @@
 
       /* Modal left panel */
       '#kc-modal-info{width:38%;min-width:260px;padding:32px 28px;overflow-y:auto;display:flex;flex-direction:column;gap:14px;border-right:1px solid ' + C.border + '}',
-      '@media(max-width:700px){#kc-modal-info{width:100%;border-right:none;border-bottom:1px solid ' + C.border + ';min-height:auto;max-height:45%;padding:20px 18px;gap:10px}}',
+      '@media(max-width:700px){#kc-modal-info{width:100%;border-right:none;border-bottom:1px solid ' + C.border + ';min-height:auto;max-height:50%;overflow-y:auto;padding:20px 18px;gap:10px}}',
       '.kc-modal-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:' + C.accent + ';margin:0}',
       '.kc-modal-name{font-size:1.2rem;font-weight:700;color:' + C.text + ';margin:0;line-height:1.3}',
       '.kc-modal-dist{font-size:2rem;font-weight:800;color:' + C.text + ';line-height:1;letter-spacing:-.02em}',
@@ -302,10 +306,6 @@
 
   function setOrigin(v) {
     filterOrigin = v;
-    document.querySelectorAll('#kc-routes-filters .kc-tab-group .kc-tab').forEach(function(t) {
-      t.classList.toggle('active', t.textContent.replace(' ','_') === v || (v==='all' && t.textContent==='All'));
-    });
-    // Re-activate correctly based on value mapping
     var originMap = { all:'All', loose_park:'Loose Park', mill_creek:'Mill Creek', sunday:'Sunday' };
     document.querySelectorAll('#kc-routes-filters .kc-tab-group .kc-tab').forEach(function(t){
       t.classList.toggle('active', t.textContent.trim() === originMap[v]);
@@ -344,8 +344,18 @@
       renderCardPreviewSVG(gpxCache[route.route_id], preview);
     }
 
-    var card = el('div', { className: 'kc-route-card' }, [preview, top, origin, desc, btn]);
+    var nameStr   = route.display_name || route.source_name || 'Route';
+    var originStr = ORIGIN_LABELS[route.origin] || route.origin;
+    var card = el('div', {
+      className: 'kc-route-card',
+      tabindex: '0',
+      role: 'button',
+      'aria-label': nameStr + ', ' + d + ' miles, ' + originStr
+    }, [preview, top, origin, desc, btn]);
     card.addEventListener('click', function() { openModal(route); });
+    card.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(route); }
+    });
     return card;
   }
 
@@ -381,7 +391,7 @@
 
   // --- Modal ------------------------------------------------------------------
   function buildModal() {
-    var closeBtn = el('button', { id: 'kc-modal-close', 'aria-label': 'Close' }, '\u00D7');
+    closeBtn = el('button', { id: 'kc-modal-close', 'aria-label': 'Close' }, '\u00D7');
     closeBtn.addEventListener('click', closeModal);
 
     var infoPanel = el('div', { id: 'kc-modal-info' });
@@ -416,8 +426,6 @@
     var originLabel = ORIGIN_LABELS[route.origin] || route.origin;
 
     infoPanel.innerHTML = '';
-    var closeBtn = el('button', { id: 'kc-modal-close', 'aria-label': 'Close' }, '×');
-    closeBtn.addEventListener('click', closeModal);
     infoPanel.appendChild(closeBtn);
     infoPanel.appendChild(el('p', { className: 'kc-modal-eyebrow' }, originLabel));
     infoPanel.appendChild(el('h2', { className: 'kc-modal-name' }, route.display_name || route.source_name || 'Route'));
@@ -446,10 +454,28 @@
       }, 'Download GPX');
       actions.appendChild(gpxBtn);
     }
+
+    // Share button
+    var shareBtn = el('button', { className: 'kc-modal-btn-outline kc-share-btn' }, 'Share route ↗');
+    shareBtn.addEventListener('click', function() {
+      var url = window.location.href;
+      if (navigator.share) {
+        navigator.share({ title: route.display_name || 'Route', url: url });
+      } else {
+        navigator.clipboard.writeText(url).then(function() {
+          shareBtn.textContent = 'Copied! ✓';
+          setTimeout(function() { shareBtn.textContent = 'Share route ↗'; }, 2000);
+        }).catch(function() {
+          shareBtn.textContent = 'Share route ↗';
+        });
+      }
+    });
+    actions.appendChild(shareBtn);
     infoPanel.appendChild(actions);
 
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
+    history.replaceState(null, '', '#route-' + route.route_id);
 
     // Initialize or reuse Leaflet map
     requestAnimationFrame(function() {
@@ -461,6 +487,7 @@
     var modal = document.getElementById('kc-route-modal');
     if (modal) modal.classList.remove('open');
     document.body.style.overflow = '';
+    history.replaceState(null, '', location.pathname + location.search);
 
     // Remove GPX layer but keep map instance
     if (activeGpxLayer && leafletMap) {
@@ -810,9 +837,18 @@
     wrap.appendChild(buildHeader());
     wrap.appendChild(buildFilterBar());
     wrap.appendChild(el('div', { id: 'kc-routes-grid' }));
+    var resetBtn = el('button', { className: 'kc-reset-btn' }, 'Clear filters');
+    resetBtn.addEventListener('click', function() {
+      filterOrigin = 'all'; filterDistance = 'all'; filterSearch = ''; sortDir = 'alpha';
+      var s = document.getElementById('kc-routes-search'); if (s) s.value = '';
+      var fb = document.getElementById('kc-routes-filters');
+      if (fb) fb.parentNode.replaceChild(buildFilterBar(), fb);
+      render();
+    });
     wrap.appendChild(el('div', { id: 'kc-routes-empty' }, [
-      el('div', { style: 'font-size:2rem' }, '\u1F50D'),
-      el('p', {}, 'No routes match your filters.')
+      el('div', { style: 'font-size:2rem' }, '\uD83D\uDD0D'),
+      el('p', {}, 'No routes match your filters.'),
+      resetBtn
     ]));
 
     // Replace or prepend into entry
@@ -827,16 +863,38 @@
 
     buildModal();
     render();
+
+    // Deep-link: auto-open route modal if URL hash matches #route-{id}
+    if (location.hash && location.hash.indexOf('#route-') === 0) {
+      var routeId = location.hash.slice(7);
+      var linked = allRoutes.filter(function(r) { return String(r.route_id) === routeId; })[0];
+      if (linked) openModal(linked);
+    }
   }
 
   function init() {
     if (!document.getElementById('kc-routes-styles')) injectStyles();
 
+    // Show spinner while Leaflet + routes.json load
+    var entry = document.querySelector('.entry-content, .wp-block-post-content, main article, #page') || document.body;
+    var loadingEl = el('div', { id: 'kc-routes-loading', style: 'display:flex;align-items:center;justify-content:center;min-height:40vh' }, [
+      el('div', { className: 'kc-spinner' })
+    ]);
+    entry.insertBefore(loadingEl, entry.firstChild);
+
     loadLibraries(function() {
       fetch(ROUTES_JSON)
         .then(function(r) { return r.ok ? r.json() : Promise.reject(r.status); })
-        .then(function(data) { buildPage(Array.isArray(data) ? data : []); })
-        .catch(function(e) { console.warn('kc-routes: failed to load routes.json', e); });
+        .then(function(data) {
+          var s = document.getElementById('kc-routes-loading');
+          if (s) s.parentNode.removeChild(s);
+          buildPage(Array.isArray(data) ? data : []);
+        })
+        .catch(function(e) {
+          var s = document.getElementById('kc-routes-loading');
+          if (s) s.innerHTML = '<p style="color:#8A8A9A;font-size:.9rem;margin:0">Unable to load routes. Please try again later.</p>';
+          console.warn('kc-routes: failed to load routes.json', e);
+        });
     });
   }
 
