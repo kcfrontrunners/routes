@@ -154,6 +154,8 @@ _ROUTE_ID_RE = re.compile(
 
 _GMAP_ID_RE = re.compile(r"gmap-pedometer\.com/?\?r=(\d+)", re.IGNORECASE)
 
+_KCFR_ROUTE_RE = re.compile(r"kcfrontrunners\.org/routes/#route-(\d+)", re.IGNORECASE)
+
 _ROUTE_URL_RE = re.compile(
     r"(?i)\b(?:run|walk)?\s*route\s*:\s*(?:<a[^>]*href=\"((?:https?://|www\.)[^\"]+)\"|((?:https?://|www\.)[^\s<]+))",
     re.IGNORECASE | re.DOTALL,
@@ -250,6 +252,14 @@ def main() -> int:
                     resolved.append(rid)
                 continue
             if m := _GMAP_ID_RE.search(url):
+                route_int_id = int(m.group(1))
+                if route_int_id in by_id:
+                    rid = by_id[route_int_id]
+                    if rid not in resolved:
+                        resolved.append(rid)
+                continue
+            # kcfrontrunners.org: #route-NNNNNN fragment equals numeric route_id
+            if m := _KCFR_ROUTE_RE.search(url):
                 route_int_id = int(m.group(1))
                 if route_int_id in by_id:
                     rid = by_id[route_int_id]
