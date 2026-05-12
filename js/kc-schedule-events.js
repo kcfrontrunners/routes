@@ -1,7 +1,7 @@
 (function(){
   'use strict';
   var CAL='kansascityfrontrunners@gmail.com';
-  var KEY='GOOGLE_CALENDAR_API_KEY';
+  var KEY='AIzaSyDNz85jaB7O9pUfkFt4jcjyIbRxj_UJ0Dg';
   var ROUTES='https://kcfrontrunners.github.io/routes/data/routes.json';
   var KCRT_JS='https://kcfrontrunners.github.io/routes/js/kc-route-modal.js';
   var DAYS=90;
