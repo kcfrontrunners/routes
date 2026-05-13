@@ -2,7 +2,8 @@
   'use strict';
 
   // --- Config ----------------------------------------------------------------
-  var ROUTES_JSON = 'https://kcfrontrunners.github.io/routes/data/routes.json';
+  var ROUTES_JSON  = 'https://kcfrontrunners.github.io/routes/data/routes.json';
+  var HISTORY_JSON = 'https://kcfrontrunners.github.io/routes/data/route-history.json';
   var LEAFLET_CSS = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
   var LEAFLET_JS  = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
   var LEAFLET_GPX = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js';
@@ -34,6 +35,7 @@
   var debounceTimer     = null;
   var previewObserver   = null;
   var closeBtn          = null;
+  var routeHistoryMap   = {};
 
   var ORIGIN_LABELS = { loose_park: 'Loose Park', mill_creek: 'Mill Creek', sunday: 'Sunday' };
   var DIST_RANGES   = [
@@ -435,6 +437,23 @@
     infoPanel.appendChild(distEl);
 
     infoPanel.appendChild(el('p', { className: 'kc-modal-desc' }, desc));
+
+    var histEntry = routeHistoryMap[String(route.route_id)];
+    if (histEntry && histEntry.last_run_dates && histEntry.last_run_dates.length) {
+      var histSection = el('div', { style: 'margin-top:2px' });
+      histSection.appendChild(el('p', {
+        style: 'font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:' + C.muted + ';margin:0 0 6px'
+      }, 'Recent runs'));
+      histEntry.last_run_dates.slice(0, 8).forEach(function(ds) {
+        var parts = ds.split('-');
+        var d = new Date(+parts[0], +parts[1] - 1, +parts[2]); // local-time parse avoids UTC-midnight off-by-one
+        var label = d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+        histSection.appendChild(el('p', {
+          style: 'font-size:.82rem;color:' + C.muted + ';margin:0 0 2px;line-height:1.4'
+        }, label));
+      });
+      infoPanel.appendChild(histSection);
+    }
 
     var actions = el('div', { className: 'kc-modal-actions' });
     if (route.garmin_url) {
@@ -874,6 +893,12 @@
 
   function init() {
     if (!document.getElementById('kc-routes-styles')) injectStyles();
+
+    // Background fetch of route history — non-blocking; modal reads from routeHistoryMap when it opens
+    fetch(HISTORY_JSON)
+      .then(function(r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function(data) { routeHistoryMap = data.history || {}; })
+      .catch(function() { /* history is optional — silently skip */ });
 
     // Show spinner while Leaflet + routes.json load
     var entry = document.querySelector('.entry-content, .wp-block-post-content, main article, #page') || document.body;
