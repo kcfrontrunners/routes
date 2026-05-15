@@ -119,7 +119,7 @@
       '.kc-modal-name{font-size:1.2rem;font-weight:700;color:' + C.text + ';margin:0;line-height:1.3}',
       '.kc-modal-dist{font-size:2rem;font-weight:800;color:' + C.text + ';line-height:1;letter-spacing:-.02em}',
       '.kc-modal-dist span{font-size:.8rem;font-weight:400;color:' + C.muted + ';margin-left:4px}',
-      '.kc-modal-desc{font-size:.85rem;color:' + C.muted + ';line-height:1.6;flex:1}',
+      '.kc-modal-desc{font-size:.85rem;color:' + C.muted + ';line-height:1.6}',
       '.kc-modal-actions{display:flex;flex-direction:column;gap:8px;margin-top:auto;padding-top:8px}',
       '.kc-modal-btn-primary{display:block;text-align:center;padding:11px 20px;background:' + C.red + ';color:#fff;font-weight:600;font-size:.88rem;border-radius:8px;text-decoration:none;transition:opacity .15s}',
       '.kc-modal-btn-primary:hover{opacity:.85;color:#fff}',
