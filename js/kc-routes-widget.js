@@ -114,7 +114,7 @@
 
       /* Modal left panel */
       '#kc-modal-info{width:38%;min-width:260px;padding:32px 28px;overflow-y:auto;display:flex;flex-direction:column;gap:14px;border-right:1px solid ' + C.border + '}',
-      '@media(max-width:700px){#kc-modal-info{position:relative;width:100%;border-right:none;border-bottom:1px solid ' + C.border + ';min-height:auto;max-height:50%;overflow-y:auto;padding:20px 18px;gap:10px}}',
+      '@media(max-width:700px){#kc-modal-info{width:100%;border-right:none;border-bottom:1px solid ' + C.border + ';min-height:auto;max-height:50%;overflow-y:auto;padding:20px 18px;gap:10px}}',
       '.kc-modal-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:' + C.accent + ';margin:0}',
       '.kc-modal-name{font-size:1.2rem;font-weight:700;color:' + C.text + ';margin:0;line-height:1.3}',
       '.kc-modal-dist{font-size:2rem;font-weight:800;color:' + C.text + ';line-height:1;letter-spacing:-.02em}',
@@ -139,10 +139,12 @@
       '@keyframes kc-spin{to{transform:rotate(360deg)}}',
 
       /* Close button */
-      '#kc-modal-close{align-self:flex-start;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#F0EDE8;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s;line-height:1;flex-shrink:0}',
+      '#kc-modal-close{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#F0EDE8;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s;line-height:1;flex-shrink:0}',
       '#kc-modal-close:hover{background:rgba(255,255,255,.16)}',
-      '@media(max-width:700px){#kc-modal-close{position:absolute;top:12px;right:16px}}',
       '@media(max-width:700px){.kc-modal-dist{font-size:1.4rem}}',
+      '@media(max-width:700px){.kc-modal-actions{flex-direction:row;flex-wrap:wrap}}',
+      '@media(max-width:700px){.kc-modal-btn-primary{flex-basis:100%}}',
+      '@media(max-width:700px){.kc-modal-btn-outline{flex:1;min-width:0;font-size:.82rem;padding:9px 10px;text-align:center}}',
 
       /* Leaflet light overrides */
       '.leaflet-container{background:#e8e8e8}',
@@ -430,8 +432,10 @@
     var originLabel = ORIGIN_LABELS[route.origin] || route.origin;
 
     infoPanel.innerHTML = '';
-    infoPanel.appendChild(closeBtn);
-    infoPanel.appendChild(el('p', { className: 'kc-modal-eyebrow' }, originLabel));
+    var headerRow = el('div', { style: 'display:flex;justify-content:space-between;align-items:center;gap:8px' });
+    headerRow.appendChild(el('p', { className: 'kc-modal-eyebrow', style: 'margin:0;flex:1' }, originLabel));
+    headerRow.appendChild(closeBtn);
+    infoPanel.appendChild(headerRow);
     infoPanel.appendChild(el('h2', { className: 'kc-modal-name' }, route.display_name || route.source_name || 'Route'));
 
     var distEl = el('div', { className: 'kc-modal-dist' });
