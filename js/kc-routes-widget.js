@@ -114,7 +114,7 @@
 
       /* Modal left panel */
       '#kc-modal-info{width:38%;min-width:260px;padding:32px 28px;overflow-y:auto;display:flex;flex-direction:column;gap:14px;border-right:1px solid ' + C.border + '}',
-      '@media(max-width:700px){#kc-modal-info{width:100%;border-right:none;border-bottom:1px solid ' + C.border + ';min-height:auto;max-height:50%;overflow-y:auto;padding:20px 18px;gap:10px}}',
+      '@media(max-width:700px){#kc-modal-info{width:100%;border-right:none;border-bottom:1px solid ' + C.border + ';min-height:auto;max-height:50%;overflow-y:auto;padding:max(20px,env(safe-area-inset-top,20px)) 18px 20px;gap:10px}}',
       '.kc-modal-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:' + C.accent + ';margin:0}',
       '.kc-modal-name{font-size:1.2rem;font-weight:700;color:' + C.text + ';margin:0;line-height:1.3}',
       '.kc-modal-dist{font-size:2rem;font-weight:800;color:' + C.text + ';line-height:1;letter-spacing:-.02em}',
@@ -451,14 +451,14 @@
       histSection.appendChild(el('p', {
         style: 'font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:' + C.muted + ';margin:0 0 6px'
       }, 'Recent runs'));
-      histEntry.last_run_dates.slice(0, 8).forEach(function(ds) {
+      var dateLabels = histEntry.last_run_dates.slice(0, 8).map(function(ds) {
         var parts = ds.split('-');
         var d = new Date(+parts[0], +parts[1] - 1, +parts[2]); // local-time parse avoids UTC-midnight off-by-one
-        var label = d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
-        histSection.appendChild(el('p', {
-          style: 'font-size:.82rem;color:' + C.muted + ';margin:0 0 2px;line-height:1.4'
-        }, label));
+        return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
       });
+      histSection.appendChild(el('p', {
+        style: 'font-size:.82rem;color:' + C.muted + ';margin:0;line-height:1.5'
+      }, dateLabels.join(', ')));
       infoPanel.appendChild(histSection);
     }
 
