@@ -162,6 +162,25 @@ _ROUTE_URL_RE = re.compile(
 )
 
 
+def garmin_course_id(url_str: str) -> str | None:
+    """Extract the numeric course ID from any connect.garmin.com URL.
+
+    Handles both path variants used by Garmin Connect:
+      /modern/course/439243794
+      /app/course/439243794
+    Returns the ID as a string, or None if the URL isn't a Garmin course URL.
+    Mirrors EventRouteLinkingService.garminCourseID(from:) in the iOS app.
+    """
+    if "garmin.com" not in url_str.lower():
+        return None
+    try:
+        from urllib.parse import urlparse
+        last = urlparse(url_str).path.rstrip("/").rsplit("/", 1)[-1]
+        return last if last.isdigit() else None
+    except Exception:
+        return None
+
+
 def parse_route_ids(text: str) -> list[int]:
     results: list[int] = []
     for m in _ROUTE_ID_RE.finditer(text):
@@ -207,11 +226,14 @@ def main() -> int:
     display_names: dict[str, str] = {r["route_id"]: r.get("display_name", "") for r in routes}
     by_gpx: dict[str, str] = {}
     by_garmin: dict[str, str] = {}
+    by_garmin_course_id: dict[str, str] = {}   # course ID string → route_id
     for r in routes:
         if gpx := r.get("gpx_url", "").strip().lower():
             by_gpx.setdefault(gpx, r["route_id"])
-        if garmin := r.get("garmin_url", "").strip().lower():
-            by_garmin.setdefault(garmin, r["route_id"])
+        if garmin := r.get("garmin_url", "").strip():
+            by_garmin.setdefault(garmin.lower(), r["route_id"])
+            if cid := garmin_course_id(garmin):
+                by_garmin_course_id.setdefault(cid, r["route_id"])
 
     # Load existing history (empty dict if file absent)
     existing_history: dict[str, dict] = {}
@@ -251,6 +273,13 @@ def main() -> int:
                 if rid not in resolved:
                     resolved.append(rid)
                 continue
+            # Garmin fuzzy match: /modern/course/N and /app/course/N both resolve
+            # to the same course — match on the numeric ID alone (mirrors iOS app).
+            if cid := garmin_course_id(url):
+                if rid := by_garmin_course_id.get(cid):
+                    if rid not in resolved:
+                        resolved.append(rid)
+                    continue
             if m := _GMAP_ID_RE.search(url):
                 route_int_id = int(m.group(1))
                 if route_int_id in by_id:
