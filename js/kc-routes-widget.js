@@ -153,8 +153,8 @@
       '.kc-filter-recent{flex-direction:row;align-items:center;gap:8px}',
       '.kc-filter-recent label{font-size:.82rem;color:' + C.muted + ';cursor:pointer;user-select:none}',
 
-      /* Last-run date badge overlaid on card preview thumbnail */
-      '.kc-last-run-badge{position:absolute;bottom:7px;left:8px;background:rgba(18,18,23,.72);backdrop-filter:blur(4px);color:' + C.accent + ';font-size:.65rem;font-weight:700;letter-spacing:.04em;padding:3px 9px;border-radius:20px;pointer-events:none;white-space:nowrap}',
+      /* Last-run date label — sits between preview thumbnail and route name */
+      '.kc-last-run-badge{font-size:.68rem;font-weight:700;letter-spacing:.04em;color:' + C.accent + ';margin-top:-2px;white-space:nowrap}',
 
       /* Leaflet light overrides */
       '.leaflet-container{background:#e8e8e8}',
@@ -377,25 +377,29 @@
       renderCardPreviewSVG(gpxCache[route.route_id], preview);
     }
 
-    // Last-run badge (shown when "Recent routes only" is active)
+    // Last-run label — sits between preview and name row when "Recent routes only" is active
+    var lastRunEl = null;
     if (filterRecentOnly) {
       var rhist = routeHistoryMap[String(route.route_id)];
       if (rhist && rhist.last_run_dates && rhist.last_run_dates.length) {
         var bp = rhist.last_run_dates[0].split('-');
         var bd = new Date(+bp[0], +bp[1] - 1, +bp[2]);
         var badgeLabel = bd.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-        preview.appendChild(el('span', { className: 'kc-last-run-badge' }, 'Last run ' + badgeLabel));
+        lastRunEl = el('div', { className: 'kc-last-run-badge' }, 'Last run ' + badgeLabel);
       }
     }
 
     var nameStr   = route.display_name || route.source_name || 'Route';
     var originStr = ORIGIN_LABELS[route.origin] || route.origin;
+    var cardChildren = [preview];
+    if (lastRunEl) cardChildren.push(lastRunEl);
+    cardChildren.push(top, origin, desc, btn);
     var card = el('div', {
       className: 'kc-route-card',
       tabindex: '0',
       role: 'button',
       'aria-label': nameStr + ', ' + d + ' miles, ' + originStr
-    }, [preview, top, origin, desc, btn]);
+    }, cardChildren);
     card.addEventListener('click', function() { openModal(route); });
     card.addEventListener('keydown', function(e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(route); }
@@ -767,10 +771,8 @@
       ctx.lineCap     = 'round';
       ctx.stroke();
       if (document.body.contains(container)) {
-        var savedBadge = container.querySelector('.kc-last-run-badge');
         container.innerHTML = '';
         container.appendChild(canvas);
-        if (savedBadge) container.appendChild(savedBadge);
       }
     }
 
