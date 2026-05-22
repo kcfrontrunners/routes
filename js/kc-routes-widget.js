@@ -767,8 +767,10 @@
       ctx.lineCap     = 'round';
       ctx.stroke();
       if (document.body.contains(container)) {
+        var savedBadge = container.querySelector('.kc-last-run-badge');
         container.innerHTML = '';
         container.appendChild(canvas);
+        if (savedBadge) container.appendChild(savedBadge);
       }
     }
 
