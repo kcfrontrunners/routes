@@ -36,6 +36,7 @@
   var previewObserver   = null;
   var closeBtn          = null;
   var routeHistoryMap   = {};
+  var filterRecentOnly  = false;
 
   var ORIGIN_LABELS = { loose_park: 'Loose Park', mill_creek: 'Mill Creek', sunday: 'Sunday' };
   var DIST_RANGES   = [
@@ -147,6 +148,14 @@
       '@media(max-width:700px){.kc-modal-btn-outline{flex:1;min-width:0;font-size:.82rem;padding:9px 10px;text-align:center}}',
       '@media(max-width:700px){.kc-gpx-btn{display:none}}',
 
+      /* Recent-only checkbox filter */
+      '#kc-routes-recent{width:16px;height:16px;cursor:pointer;accent-color:' + C.accent + ';flex-shrink:0}',
+      '.kc-filter-recent{flex-direction:row;align-items:center;gap:8px}',
+      '.kc-filter-recent label{font-size:.82rem;color:' + C.muted + ';cursor:pointer;user-select:none}',
+
+      /* Last-run date badge overlaid on card preview thumbnail */
+      '.kc-last-run-badge{position:absolute;bottom:7px;left:8px;background:rgba(18,18,23,.72);backdrop-filter:blur(4px);color:' + C.accent + ';font-size:.65rem;font-weight:700;letter-spacing:.04em;padding:3px 9px;border-radius:20px;pointer-events:none;white-space:nowrap}',
+
       /* Leaflet light overrides */
       '.leaflet-container{background:#e8e8e8}',
       '.leaflet-control-attribution{background:rgba(255,255,255,.8)!important;color:rgba(0,0,0,.5)!important}',
@@ -221,6 +230,14 @@
           var haystack = ((r.display_name || '') + ' ' + (r.display_description || '')).toLowerCase();
           if (haystack.indexOf(q) === -1) return false;
         }
+        if (filterRecentOnly) {
+          var hist = routeHistoryMap[String(r.route_id)];
+          if (!hist || !hist.last_run_dates || !hist.last_run_dates.length) return false;
+          var rparts = hist.last_run_dates[0].split('-');
+          var lastRun = new Date(+rparts[0], +rparts[1] - 1, +rparts[2]);
+          var cutoff = new Date(); cutoff.setDate(cutoff.getDate() - 60);
+          if (lastRun < cutoff) return false;
+        }
         return true;
       })
       .sort(function(a, b) {
@@ -279,6 +296,15 @@
       distPills
     ]);
 
+    // Recent-only checkbox
+    var recentChk = el('input', { type: 'checkbox', id: 'kc-routes-recent' });
+    if (filterRecentOnly) recentChk.setAttribute('checked', 'checked');
+    recentChk.addEventListener('change', function() { filterRecentOnly = this.checked; render(); });
+    var recentGroup = el('div', { className: 'kc-filter-group kc-filter-recent' }, [
+      recentChk,
+      el('label', { htmlFor: 'kc-routes-recent' }, 'Recent routes only')
+    ]);
+
     // Search
     var search = el('input', {
       id: 'kc-routes-search',
@@ -307,7 +333,7 @@
     var count = el('span', { className: 'kc-count', id: 'kc-routes-count' }, '');
 
     return el('div', { id: 'kc-routes-filters' }, [
-      originGroup, distGroup, search, sortBtn, count
+      originGroup, distGroup, recentGroup, search, sortBtn, count
     ]);
   }
 
@@ -349,6 +375,17 @@
     // If already cached from a modal open, render immediately
     if (gpxCache[route.route_id]) {
       renderCardPreviewSVG(gpxCache[route.route_id], preview);
+    }
+
+    // Last-run badge (shown when "Recent routes only" is active)
+    if (filterRecentOnly) {
+      var rhist = routeHistoryMap[String(route.route_id)];
+      if (rhist && rhist.last_run_dates && rhist.last_run_dates.length) {
+        var bp = rhist.last_run_dates[0].split('-');
+        var bd = new Date(+bp[0], +bp[1] - 1, +bp[2]);
+        var badgeLabel = bd.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        preview.appendChild(el('span', { className: 'kc-last-run-badge' }, 'Last run ' + badgeLabel));
+      }
     }
 
     var nameStr   = route.display_name || route.source_name || 'Route';
@@ -865,7 +902,7 @@
     wrap.appendChild(el('div', { id: 'kc-routes-grid' }));
     var resetBtn = el('button', { className: 'kc-reset-btn' }, 'Clear filters');
     resetBtn.addEventListener('click', function() {
-      filterOrigin = 'all'; filterDistance = 'all'; filterSearch = ''; sortDir = 'alpha';
+      filterOrigin = 'all'; filterDistance = 'all'; filterSearch = ''; sortDir = 'alpha'; filterRecentOnly = false;
       var s = document.getElementById('kc-routes-search'); if (s) s.value = '';
       var fb = document.getElementById('kc-routes-filters');
       if (fb) fb.parentNode.replaceChild(buildFilterBar(), fb);
