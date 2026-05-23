@@ -27,7 +27,7 @@
   var filterOrigin   = 'all';
   var filterDistance = 'all';
   var filterSearch   = '';
-  var sortDir        = 'alpha'; // 'alpha' | 'asc' | 'desc'
+  var sortDir        = 'alpha'; // 'alpha' | 'asc' | 'desc' | 'lastrun'
   var gpxCache          = {};
   var leafletMap        = null;
   var activeGpxLayer    = null;
@@ -36,7 +36,6 @@
   var previewObserver   = null;
   var closeBtn          = null;
   var routeHistoryMap   = {};
-  var filterRecentOnly  = false;
 
   var ORIGIN_LABELS = { loose_park: 'Loose Park', mill_creek: 'Mill Creek', sunday: 'Sunday' };
   var DIST_RANGES   = [
@@ -70,9 +69,14 @@
       '#kc-routes-search{background:' + C.surface + ';border:1px solid ' + C.border + ';border-radius:8px;color:' + C.text + ';padding:6px 12px;font-size:.85rem;width:200px;outline:none}',
       '#kc-routes-search::placeholder{color:' + C.muted + '}',
       '#kc-routes-search:focus{border-color:rgba(255,255,255,.3)}',
-      '.kc-sort-btn{background:none;border:1px solid ' + C.border + ';color:' + C.muted + ';border-radius:8px;padding:6px 12px;font-size:.8rem;cursor:pointer;white-space:nowrap;transition:all .15s}',
-      '.kc-sort-btn:hover{color:' + C.text + ';border-color:rgba(255,255,255,.25)}',
       '.kc-count{font-size:.8rem;color:' + C.muted + ';margin-left:auto;white-space:nowrap}',
+      '.kc-sort-wrap{position:relative}',
+      '.kc-sort-trigger{background:none;border:1px solid ' + C.border + ';color:' + C.muted + ';border-radius:8px;padding:6px 12px;font-size:.8rem;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:6px;transition:all .15s}',
+      '.kc-sort-trigger:hover{color:' + C.text + ';border-color:rgba(255,255,255,.25)}',
+      '.kc-sort-panel{position:absolute;top:calc(100% + 4px);right:0;background:' + C.surface + ';border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:4px;min-width:160px;z-index:200;box-shadow:0 8px 24px rgba(0,0,0,.4);display:none}',
+      '.kc-sort-panel.open{display:block}',
+      '.kc-sort-option{display:block;width:100%;text-align:left;background:none;border:none;color:' + C.muted + ';font-size:.82rem;padding:8px 12px;border-radius:6px;cursor:pointer;white-space:nowrap;transition:background .1s}',
+      '.kc-sort-option:hover,.kc-sort-option.active{background:rgba(255,255,255,.07);color:' + C.text + '}',
 
       /* Grid */
       '#kc-routes-grid{max-width:var(--wp--style--global--content-size,1200px);margin:0 auto;padding:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}',
@@ -147,11 +151,6 @@
       '@media(max-width:700px){.kc-modal-btn-primary{flex:1;min-width:0;font-size:.82rem;padding:9px 10px}}',
       '@media(max-width:700px){.kc-modal-btn-outline{flex:1;min-width:0;font-size:.82rem;padding:9px 10px;text-align:center}}',
       '@media(max-width:700px){.kc-gpx-btn{display:none}}',
-
-      /* Recent-only checkbox filter */
-      '#kc-routes-recent{width:16px;height:16px;cursor:pointer;accent-color:' + C.accent + ';flex-shrink:0}',
-      '.kc-filter-recent{flex-direction:row;align-items:center;gap:8px}',
-      '.kc-filter-recent label{font-size:.82rem;color:' + C.muted + ';cursor:pointer;user-select:none}',
 
       /* Last-run date label — sits between preview thumbnail and route name */
       '.kc-last-run-badge{font-size:.68rem;font-weight:700;letter-spacing:.04em;color:' + C.accent + ';margin-top:-2px;white-space:nowrap}',
@@ -230,14 +229,6 @@
           var haystack = ((r.display_name || '') + ' ' + (r.display_description || '')).toLowerCase();
           if (haystack.indexOf(q) === -1) return false;
         }
-        if (filterRecentOnly) {
-          var hist = routeHistoryMap[String(r.route_id)];
-          if (!hist || !hist.last_run_dates || !hist.last_run_dates.length) return false;
-          var rparts = hist.last_run_dates[0].split('-');
-          var lastRun = new Date(+rparts[0], +rparts[1] - 1, +rparts[2]);
-          var cutoff = new Date(); cutoff.setDate(cutoff.getDate() - 60);
-          if (lastRun < cutoff) return false;
-        }
         return true;
       })
       .sort(function(a, b) {
@@ -249,6 +240,19 @@
           var da = (a.display_description || a.source_description || '').toLowerCase();
           var db = (b.display_description || b.source_description || '').toLowerCase();
           return da < db ? -1 : da > db ? 1 : 0;
+        }
+        if (sortDir === 'lastrun') {
+          var getTs = function(r) {
+            var h = routeHistoryMap[String(r.route_id)];
+            if (!h || !h.last_run_dates || !h.last_run_dates.length) return -1;
+            var p = h.last_run_dates[0].split('-');
+            return new Date(+p[0], +p[1] - 1, +p[2]).getTime();
+          };
+          var ta = getTs(a), tb = getTs(b);
+          if (ta !== tb) return tb - ta; // newest first; -1 (no history) always loses
+          var na = (a.display_name || a.source_name || '').toLowerCase();
+          var nb = (b.display_name || b.source_name || '').toLowerCase();
+          return na < nb ? -1 : na > nb ? 1 : 0;
         }
         return sortDir === 'asc'
           ? a.distance_miles - b.distance_miles
@@ -296,15 +300,6 @@
       distPills
     ]);
 
-    // Recent-only checkbox
-    var recentChk = el('input', { type: 'checkbox', id: 'kc-routes-recent' });
-    if (filterRecentOnly) recentChk.setAttribute('checked', 'checked');
-    recentChk.addEventListener('change', function() { filterRecentOnly = this.checked; render(); });
-    var recentGroup = el('div', { className: 'kc-filter-group kc-filter-recent' }, [
-      recentChk,
-      el('label', { htmlFor: 'kc-routes-recent' }, 'Recent routes only')
-    ]);
-
     // Search
     var search = el('input', {
       id: 'kc-routes-search',
@@ -318,22 +313,47 @@
       debounceTimer = setTimeout(function() { setSearch(val); }, 200);
     });
 
-    // Sort button
-    function sortLabel() {
-      return sortDir === 'alpha' ? 'A \u2192 Z' : 'Distance ' + (sortDir === 'asc' ? '\u2191' : '\u2193');
+    // Sort dropdown
+    var SORT_OPTIONS = [
+      { key: 'alpha',   label: 'A \u2192 Z' },
+      { key: 'asc',     label: 'Distance \u2191' },
+      { key: 'desc',    label: 'Distance \u2193' },
+      { key: 'lastrun', label: 'Last run date' }
+    ];
+    var sortPanel = el('div', { className: 'kc-sort-panel' });
+    var triggerBtn = el('button', { className: 'kc-sort-trigger' }, '');
+    function updateTriggerLabel() {
+      var cur = SORT_OPTIONS.filter(function(o) { return o.key === sortDir; })[0];
+      triggerBtn.textContent = (cur ? cur.label : 'Sort') + ' \u25be';
     }
-    var sortBtn = el('button', { className: 'kc-sort-btn' }, sortLabel());
-    sortBtn.addEventListener('click', function() {
-      sortDir = sortDir === 'alpha' ? 'asc' : sortDir === 'asc' ? 'desc' : 'alpha';
-      sortBtn.textContent = sortLabel();
-      render();
+    SORT_OPTIONS.forEach(function(opt) {
+      var btn = el('button', {
+        className: 'kc-sort-option' + (sortDir === opt.key ? ' active' : '')
+      }, opt.label);
+      btn.addEventListener('click', function() {
+        sortDir = opt.key;
+        sortPanel.classList.remove('open');
+        sortPanel.querySelectorAll('.kc-sort-option').forEach(function(b) {
+          b.classList.toggle('active', b.textContent === opt.label);
+        });
+        updateTriggerLabel();
+        render();
+      });
+      sortPanel.appendChild(btn);
     });
+    updateTriggerLabel();
+    triggerBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      sortPanel.classList.toggle('open');
+    });
+    document.addEventListener('click', function() { sortPanel.classList.remove('open'); });
+    var sortWrap = el('div', { className: 'kc-sort-wrap' }, [triggerBtn, sortPanel]);
 
     // Count
     var count = el('span', { className: 'kc-count', id: 'kc-routes-count' }, '');
 
     return el('div', { id: 'kc-routes-filters' }, [
-      originGroup, distGroup, recentGroup, search, sortBtn, count
+      originGroup, distGroup, search, sortWrap, count
     ]);
   }
 
@@ -377,16 +397,14 @@
       renderCardPreviewSVG(gpxCache[route.route_id], preview);
     }
 
-    // Last-run label — sits between preview and name row when "Recent routes only" is active
+    // Last-run label — always shown when history exists, sits between preview and name row
     var lastRunEl = null;
-    if (filterRecentOnly) {
-      var rhist = routeHistoryMap[String(route.route_id)];
-      if (rhist && rhist.last_run_dates && rhist.last_run_dates.length) {
-        var bp = rhist.last_run_dates[0].split('-');
-        var bd = new Date(+bp[0], +bp[1] - 1, +bp[2]);
-        var badgeLabel = bd.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-        lastRunEl = el('div', { className: 'kc-last-run-badge' }, 'Last run ' + badgeLabel);
-      }
+    var rhist = routeHistoryMap[String(route.route_id)];
+    if (rhist && rhist.last_run_dates && rhist.last_run_dates.length) {
+      var bp = rhist.last_run_dates[0].split('-');
+      var bd = new Date(+bp[0], +bp[1] - 1, +bp[2]);
+      lastRunEl = el('div', { className: 'kc-last-run-badge' },
+        'Last run ' + bd.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }));
     }
 
     var nameStr   = route.display_name || route.source_name || 'Route';
@@ -906,7 +924,7 @@
     wrap.appendChild(el('div', { id: 'kc-routes-grid' }));
     var resetBtn = el('button', { className: 'kc-reset-btn' }, 'Clear filters');
     resetBtn.addEventListener('click', function() {
-      filterOrigin = 'all'; filterDistance = 'all'; filterSearch = ''; sortDir = 'alpha'; filterRecentOnly = false;
+      filterOrigin = 'all'; filterDistance = 'all'; filterSearch = ''; sortDir = 'alpha';
       var s = document.getElementById('kc-routes-search'); if (s) s.value = '';
       var fb = document.getElementById('kc-routes-filters');
       if (fb) fb.parentNode.replaceChild(buildFilterBar(), fb);
