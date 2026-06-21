@@ -37,6 +37,20 @@
       "reason": "duplicate of 6095074",
       "merged_into": "6095074",
       "merged_history": []
+    },
+    {
+      "route_id": "6187384",
+      "display_name": "Mill Creek",
+      "display_description": "43rd, State Line, 39th, Wyoming, Karnes, 31st, Pennsylvania",
+      "garmin_url": "https://connect.garmin.com/app/course/439244279",
+      "gpx_url": "https://kcfrontrunners.github.io/routes/gpx/6187384-Mill-Creek.gpx",
+      "distance_miles": 4.914,
+      "deleted_at": "2026-06-20",
+      "reason": "removed with history",
+      "merged_into": null,
+      "merged_history": [
+        "2026-03-18"
+      ]
     }
   ]
 }
