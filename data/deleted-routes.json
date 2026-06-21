@@ -1,0 +1,18 @@
+{
+  "deleted": [
+    {
+      "route_id": "6380664",
+      "display_name": "Loose Park",
+      "display_description": "Westwood Park, Plaza, Mill Creek, Nelson Atkins, UMKC (no stairs!)",
+      "garmin_url": "https://connect.garmin.com/app/course/439243937",
+      "gpx_url": "https://kcfrontrunners.github.io/routes/gpx/6380664-Loose-Park.gpx",
+      "distance_miles": 5.0355,
+      "deleted_at": "2026-06-20",
+      "reason": "duplicate of 5948214",
+      "merged_into": "5948214",
+      "merged_history": [
+        "2025-07-09"
+      ]
+    }
+  ]
+}
