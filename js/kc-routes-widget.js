@@ -226,7 +226,7 @@
           if (range && range.test && !range.test(r.distance_miles)) return false;
         }
         if (q) {
-          var haystack = ((r.display_name || '') + ' ' + (r.display_description || '')).toLowerCase();
+          var haystack = ((r.display_name || '') + ' ' + (r.display_description || '') + ' ' + (r.route_id || '')).toLowerCase();
           if (haystack.indexOf(q) === -1) return false;
         }
         return true;
