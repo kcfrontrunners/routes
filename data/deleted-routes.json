@@ -25,6 +25,18 @@
       "reason": "duplicate of 6052735",
       "merged_into": "6052735",
       "merged_history": []
+    },
+    {
+      "route_id": "6060065",
+      "display_name": "Loose Park",
+      "display_description": "Mill Creek Park - Sunset Dr, Mill Creek, The Nelson",
+      "garmin_url": "https://connect.garmin.com/app/course/439244618",
+      "gpx_url": "https://kcfrontrunners.github.io/routes/gpx/6060065-Loose-Park.gpx",
+      "distance_miles": 5.0524,
+      "deleted_at": "2026-06-20",
+      "reason": "duplicate of 6095074",
+      "merged_into": "6095074",
+      "merged_history": []
     }
   ]
 }
