@@ -51,6 +51,20 @@
       "merged_history": [
         "2026-03-18"
       ]
+    },
+    {
+      "route_id": "6523693",
+      "display_name": "Mill Creek",
+      "display_description": "43rd E to Rockhill to Brush Creek N to 47th E to Mill Creek and REPEAT.",
+      "garmin_url": "https://connect.garmin.com/app/course/439243677",
+      "gpx_url": "https://kcfrontrunners.github.io/routes/gpx/6523693-Mill-Creek.gpx",
+      "distance_miles": 5.907,
+      "deleted_at": "2026-06-20",
+      "reason": "removed with history",
+      "merged_into": null,
+      "merged_history": [
+        "2025-12-03"
+      ]
     }
   ]
 }
