@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-28T17:17:01Z",
+  "updated_at": "2026-07-02T06:01:01Z",
   "history": {
     "5924302": {
       "display_name": "Mission Hills - Arno Park",
@@ -63,6 +63,7 @@
     "6025119": {
       "display_name": "Loose Park",
       "last_run_dates": [
+        "2026-07-01",
         "2026-03-11",
         "2025-04-09"
       ]
