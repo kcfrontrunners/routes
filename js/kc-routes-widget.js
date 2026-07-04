@@ -912,8 +912,10 @@
   function buildPage(routes) {
     allRoutes = routes;
 
-    // Find the WordPress page content entry point
-    var entry = document.querySelector('.entry-content, .wp-block-post-content, main article, #page');
+    // Find the WordPress page content entry point.
+    // "main" is a fallback for the route CPT archive template (no .entry-content wrapper there) —
+    // scoped safely since header/footer are siblings of <main>, never its children.
+    var entry = document.querySelector('.entry-content, .wp-block-post-content, main article, #page, main');
     if (!entry) entry = document.body;
 
     // Inject our wrapper before whatever WP put there
