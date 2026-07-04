@@ -1333,5 +1333,20 @@
     "source_name": "Hyde Park",
     "source_description": "",
     "notes": ""
+  },
+  {
+    "route_id": "7810613",
+    "display_name": "Rock Island Trail - Vale Trailhead (North)",
+    "display_summary": "",
+    "display_description": "Route going north from the Vale Trailhead at Bannister Rd.",
+    "garmin_name": "Rock Island Trail - Vale Trailhead (North)",
+    "distance_miles": 6.42,
+    "origin": "sunday",
+    "gpx_url": "https://kcfrontrunners.github.io/routes/gpx/7810613-Rock-Island-Trail-Vale-Trailhead-North.gpx",
+    "garmin_url": "https://connect.garmin.com/app/course/483163329",
+    "garmin_embed_url": "",
+    "source_name": "Rock Island Trail - Vale Trailhead (North)",
+    "source_description": "Route going north from the Vale Trailhead at Bannister Rd.",
+    "notes": ""
   }
 ]
