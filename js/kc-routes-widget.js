@@ -7,8 +7,14 @@
   var LEAFLET_CSS = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
   var LEAFLET_JS  = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
   var LEAFLET_GPX = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js';
-  var TILE_URL    = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
-  var TILE_ATTR   = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
+  // Esri World Light Gray Base — free, no API key. Note Esri orders tiles {z}/{y}/{x},
+  // has no subdomain sharding, no retina suffix, and no file extension.
+  // TILE_BASE is shared by the Leaflet layer and the canvas thumbnail compositor so the
+  // two paths can't drift apart.
+  var TILE_BASE   = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile';
+  var TILE_URL    = TILE_BASE + '/{z}/{y}/{x}';
+  var TILE_MAXZ   = 16; // Esri Light Gray serves no tiles past z16
+  var TILE_ATTR   = 'Tiles &copy; <a href="https://www.esri.com/">Esri</a> &mdash; Esri, DeLorme, NAVTEQ';
 
   // Design tokens
   var C = {
@@ -598,8 +604,8 @@
       leafletMap = L.map(mapEl, { zoomControl: true, attributionControl: true });
       L.tileLayer(TILE_URL, {
         attribution: TILE_ATTR,
-        subdomains: 'abcd',
-        maxZoom: 19
+        maxNativeZoom: TILE_MAXZ, // stop requesting tiles past z16...
+        maxZoom: 19               // ...but let users keep zooming; Leaflet upscales
       }).addTo(leafletMap);
       leafletMap.setView([39.0997, -94.5786], 12);
     } else {
@@ -726,7 +732,7 @@
     return (1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * Math.pow(2, z);
   }
   function bestPreviewZoom(minLat, maxLat, minLon, maxLon, W, H) {
-    for (var z = 17; z >= 8; z--) {
+    for (var z = TILE_MAXZ; z >= 8; z--) {
       var pw = (lngToTileF(maxLon, z) - lngToTileF(minLon, z)) * 256;
       var ph = (latToTileF(minLat, z) - latToTileF(maxLat, z)) * 256;
       if (pw < W * 0.72 && ph < H * 0.72) return z;
@@ -769,7 +775,6 @@
     var ctx = canvas.getContext('2d');
 
     var total = (tx1 - tx0) * (ty1 - ty0), loaded = 0;
-    var subs  = ['a', 'b', 'c', 'd'];
 
     function latLonToXY(lat, lon) {
       return { x: (lngToTileF(lon, z) - ox) * 256, y: (latToTileF(lat, z) - oy) * 256 };
@@ -803,8 +808,7 @@
           var clampedX = Math.max(0, Math.min(maxT, tx));
           var clampedY = Math.max(0, Math.min(maxT, ty));
           var img   = new Image();
-          var sd    = subs[(Math.abs(clampedX) + Math.abs(clampedY)) % 4];
-          img.src   = 'https://' + sd + '.basemaps.cartocdn.com/rastertiles/voyager/' + z + '/' + clampedX + '/' + clampedY + '.png';
+          img.src   = TILE_BASE + '/' + z + '/' + clampedY + '/' + clampedX; // Esri: y before x
           var destX = (tx - ox) * 256, destY = (ty - oy) * 256;
           img.onload = function() { ctx.drawImage(img, destX, destY, 256, 256); onDone(); };
           img.onerror = onDone;
