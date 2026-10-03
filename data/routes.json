@@ -631,7 +631,7 @@
   },
   {
     "route_id": "6823543",
-    "display_name": "Case Park",
+    "display_name": "Case Park to Riverfront Trail",
     "display_summary": "",
     "display_description": "7th St E Washington N 8th E to Delaware St N to 3rd St E to Main St N to Riverfront Trail to Casino and back",
     "garmin_name": "Case Park: 7th Washington 8th, Delaware, 3rd",
@@ -1347,6 +1347,21 @@
     "garmin_embed_url": "",
     "source_name": "Rock Island Trail - Vale Trailhead (North)",
     "source_description": "Route going north from the Vale Trailhead at Bannister Rd.",
+    "notes": ""
+  },
+  {
+    "route_id": "7815267",
+    "display_name": "Case Park West Side",
+    "display_summary": "",
+    "display_description": "West Side using Riverfront Trail starting at 7th",
+    "garmin_name": "Case Park West Side: West Side using Riverfront Trail starting at 7th",
+    "distance_miles": 4.8441,
+    "origin": "sunday",
+    "gpx_url": "https://kcfrontrunners.github.io/routes/gpx/7815267-Case-Park-West-Side.gpx",
+    "garmin_url": "https://connect.garmin.com/app/course/519029537",
+    "garmin_embed_url": "",
+    "source_name": "Case Park West Side",
+    "source_description": "West Side using Riverfront Trail starting at 7th",
     "notes": ""
   }
 ]
